@@ -16,7 +16,7 @@ use 5.24.1;
 #TODO: LWP und InfluxHTTP durch Mojo POST ersetzen.
 
 
-my $METRIC = "announcements_per_s";
+my $METRIC = "announce";
 
 #
 # RIS-Live parameters
@@ -70,24 +70,40 @@ sub digest_and_write {
 
  
   my $origin_as = pop @{$hash->{path}};
-  
-  foreach my $announcement ( @{$hash->{annoucements}} ) { #returns array of hashes
+
+  $DB::single = 1;
+  foreach my $announcement ( @{ $hash->{announcements} }[0] ) { #returns array of hashes
     my $prefix_count = scalar @{$announcement->{prefixes}},
+    my $valid = rand(10) <= 3 ? "valid" : "invalid";
+    
     my $tags = {
       nexthop      => $announcement->{next_hop},
       origin_as    => $origin_as,
       peer         => $hash->{peer},
+      valid        => $valid,
+      source       => "ris",
+      peer_as      => $hash->{peer_asn}, 
     };
+    #$DB::single = 1;
+
     #Now we can put together a InfluxData-Line.
-    push @influx_lines, data2line($METRIC, $prefix_count, $tags); 
+    push @influx_lines, data2line($METRIC, $prefix_count, $tags);
+    #say data2line($METRIC, $prefix_count, $tags);
+ 
   }
-  $INFLUX->write(
-   measurement => \@influx_lines,
-   database    => 'test_measure',
+  my $res = $INFLUX->write(
+   \@influx_lines,
+   database    => "test_measure"
   );
+  say "Successfully wrote dataset!" unless ($res);
+  
+  
 }  
 
 
+sub check_prefix {
+  my $prefix = shift;
+}
 
 #
 # Beginning of main
@@ -97,20 +113,10 @@ my $ua  = Mojo::UserAgent->new;
 
 my $res = $ua->websocket('ws://ris-live.ripe.net/v1/ws/?client=' => sub {
   my ($ua, $tx) = @_;
-    $DB::single = 1;
   say 'WebSocket handshake failed!' and return unless $tx->is_websocket;
   $tx->on(json => sub {
     my ($tx, $hash) = @_;
-    $DB::single = 1;
-    foreach my $prefix_arr ($hash->{data}->{announcements}[0]->{prefixes}) {
-      if ( $prefix_arr > 1) {
-        foreach my $prefix (@{$prefix_arr}) {
-          print "$prefix \n";
-          $DB::single = 1;
-        }
-      }
-    }
-    #say "WebSocket message via JSON:" . $hash->{data}->{announcements}[0]->{prefixes}[0];
+    digest_and_write($hash->{data});
     #$tx->finish;
   });
   $tx->send($settings);
