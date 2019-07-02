@@ -15,6 +15,9 @@ use 5.24.1;
 #TODO: why is SSL not working?! FUCK!
 #TODO: LWP und InfluxHTTP durch Mojo POST ersetzen.
 
+
+my $METRIC = "announcements_per_s";
+
 #
 # RIS-Live parameters
 #
@@ -59,20 +62,29 @@ if ($ping) {
 # Subs for doing all the work
 #
 
-sub digest_hash {
+sub digest_and_write {
+  #TODO: v6 vs v4!
   my $hash = shift;
-  my $measurements;
-  # Measurement has the following format:
-  #{
-  #  id => number;
-  #  tags => {
-  #    nexthop   => 
-  #    origin_as =>
-  #    valid     => 'valid|invalid_reason'
-  #  }
-  #}
-  foreach my $announcement ($hash->{annoucements}) {
+  #Holds Influx-DB Lines.
+  my @influx_lines;   
+
+ 
+  my $origin_as = pop @{$hash->{path}};
+  
+  foreach my $announcement ( @{$hash->{annoucements}} ) { #returns array of hashes
+    my $prefix_count = scalar @{$announcement->{prefixes}},
+    my $tags = {
+      nexthop      => $announcement->{next_hop},
+      origin_as    => $origin_as,
+      peer         => $hash->{peer},
+    };
+    #Now we can put together a InfluxData-Line.
+    push @influx_lines, data2line($METRIC, $prefix_count, $tags); 
   }
+  $INFLUX->write(
+   measurement => \@influx_lines,
+   database    => 'test_measure',
+  );
 }  
 
 
