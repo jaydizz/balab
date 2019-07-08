@@ -10,7 +10,8 @@ use Mojo::JSON qw(decode_json encode_json);
 use InfluxDB::LineProtocol qw(data2line line2data);
 use InfluxDB::HTTP;
 
-use Net::IRR qw( :route );
+use Storable;
+
 use Time::HiRes qw( usleep ualarm gettimeofday tv_interval nanosleep
                     clock_gettime clock_getres clock_nanosleep clock
                     stat lstat);
@@ -20,9 +21,12 @@ use 5.24.1;
 #TODO: why is SSL not working?! FUCK!
 #TODO: LWP und InfluxHTTP durch Mojo POST ersetzen.
 
+#
+# Stash-Files usw.
+#
 
-my $METRIC = "announce";
-
+my $prefix_stash = retrieve("../stash/route-objects.storable");
+my %prefix_stash = %$prefix_stash;
 #
 # RIS-Live parameters
 #
@@ -48,6 +52,7 @@ my $settings = encode_json {
 };
 
 # Influx Stuff
+my $METRIC = "announce";
 
 our $INFLUX = InfluxDB::HTTP->new(
   host => 'localhost',
@@ -63,8 +68,8 @@ if ($ping) {
 }
   
 #Setup Whois Service (RADB for Testing Reasons
-my $ra_db = 'whois.radb.net';
-my $WHOIS = Net::IRR->connect( host => $ra_db ) or die "can't connect to $ra_db\n";
+#my $ra_db = 'whois.radb.net';
+#my $WHOIS = Net::IRR->connect( host => $ra_db ) or die "can't connect to $ra_db\n";
 
 
 my $DEBUG = shift;
@@ -82,6 +87,7 @@ sub digest_and_write {
   my $origin_as = pop @{$hash->{path}};
 
   foreach my $announcement ( @{ $hash->{announcements} }[0] ) { #returns array of hashes
+   
     my $tags = {
       nexthop      => $announcement->{next_hop},
       origin_as    => $origin_as,
@@ -92,21 +98,24 @@ sub digest_and_write {
     };
 
     my $result = check_prefixes_irr($announcement->{prefixes}, $origin_as);
-    $DB::single = 1;
-    
     #Now we can put together a InfluxData-Line.
     push @influx_lines, data2line($METRIC, $result->{valid}, $tags );  #Build a hashref from two hashrefs.
-    #push @influx_lines, data2line($METRIC, $result->{invalid},  \%( %$tags, (validity => "invalid"));
-    #push @influx_lines, data2line($METRIC, $prefix->{valid_ms}, $tags);
+    $tags->{validity} = "invalid";
+    push @influx_lines, data2line($METRIC, $result->{invalid}, $tags);
+    $tags->{validity} = "not_found";
+    push @influx_lines, data2line($METRIC, $result->{not_found}, $tags);
     #push @influx_lines, data2line($METRIC, $prefix->{valid_ls}, $tags);
  
   }
+  
+  $DB::single = 1;
   my $res = $INFLUX->write(
    \@influx_lines,
    database    => "test_measure"
   );
   say "Successfully wrote dataset!" unless ($res);
 }  
+
 
 sub check_prefixes_irr {
   my $prefix_hash = shift;
@@ -120,25 +129,16 @@ sub check_prefixes_irr {
   my $count_not_found = 0;
 
   foreach my $prefix ( @{ $prefix_hash } ) {
-    my $irr_as = "AS553";
-    #my $irr_as = $WHOIS->route_search($prefix, EXACT_MATCH);
-    if (length $irr_as) {
-      if ( $irr_as =~ /$origin_as/) {
-        $count_valid++;
-        #say "$prefix from as $origin_as is valid: $irr_as" if ($DEBUG>1);
-      } else {
-        $count_valid++;
-        say "$prefix from as $origin_as invalid: $irr_as" if ($DEBUG);
-      } 
+    if (!$prefix_stash{$prefix}) {
+      #say "$prefix with $origin_as is not found";
+      $count_not_found++;
+    } elsif ($prefix_stash{$prefix}->{$origin_as}) {
+      #say "$prefix with $origin_as is valid";
+      $count_valid++;
     } else {
-        "$prefix from as $origin_as not found" if ($DEBUG);
-        $count_not_found++;
+      $count_invalid++;
+      #say "$prefix with $origin_as is invalid";
     }
-    #} elsif ( $origin_as eq $WHOIS->route_search($prefix, LESS_SPECIFIC) ) {
-    #  $count_valid_ls++;
-    #} elsif ( $origin_as eq $WHOIS->route_search($prefix, MORE_SPECIFIC) ) {
-    #  $count_valid_ms++;
-    #}
   }
   return {
     valid     => $count_valid,
@@ -153,15 +153,15 @@ sub check_prefixes_irr {
 #
 # Beginning of main
 #
-
+while(1) {
 my $ua  = Mojo::UserAgent->new;
-#$ua = $ua->inactivity_timeout(0);
+$ua->inactivity_timeout(0);
 $ua->websocket('ws://ris-live.ripe.net/v1/ws/?client=ba-test' => sub {
   my ($ua, $tx) = @_;
   say 'WebSocket handshake failed!' and return unless $tx->is_websocket;
   $tx->on(json => sub {
     my ($tx, $hash) = @_;
-    #digest_and_write($hash->{data});
+    digest_and_write($hash->{data});
     #$tx->finish;
   });
   $tx->on(finish => sub {
@@ -171,4 +171,4 @@ $ua->websocket('ws://ris-live.ripe.net/v1/ws/?client=ba-test' => sub {
   $tx->send($settings);
 });
 Mojo::IOLoop->start unless Mojo::IOLoop->is_running;
-
+}

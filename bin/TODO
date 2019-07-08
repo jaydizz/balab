@@ -1,0 +1,14 @@
+#expand prefixes shorter than /24 to all /24s
+
+$stash = {
+  direct => {
+    prefix => {
+      $ASN => 1
+    }
+  }
+  expanded => {
+    ....
+  }
+}
+
+
