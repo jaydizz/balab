@@ -106,8 +106,6 @@ sub digest_and_write {
    database    => "test_measure"
   );
   say "Successfully wrote dataset!" unless ($res);
-  
-  
 }  
 
 sub check_prefixes_irr {
@@ -163,7 +161,7 @@ $ua->websocket('ws://ris-live.ripe.net/v1/ws/?client=ba-test' => sub {
   say 'WebSocket handshake failed!' and return unless $tx->is_websocket;
   $tx->on(json => sub {
     my ($tx, $hash) = @_;
-    digest_and_write($hash->{data});
+    #digest_and_write($hash->{data});
     #$tx->finish;
   });
   $tx->on(finish => sub {
