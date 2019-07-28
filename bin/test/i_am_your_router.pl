@@ -42,6 +42,9 @@ sub check_prefix {
     say "valid, covered by less specific";
   } else {
     say "invalid. Possible origin-asns:";
+    foreach (sort keys %{ $stash->{expanded}->{$prefix} }) {
+      say "$_";
+    }
     foreach (sort keys %{ $stash->{direct}->{$prefix} }) {
       say "$_";
     }

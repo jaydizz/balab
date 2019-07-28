@@ -61,10 +61,6 @@ if ($ping) {
   die "Influx not working. \n";
 }
   
-#Setup Whois Service (RADB for Testing Reasons
-#my $ra_db = 'whois.radb.net';
-#my $WHOIS = Net::IRR->connect( host => $ra_db ) or die "can't connect to $ra_db\n";
-
 #
 # Stash-Files usw.
 #
@@ -72,6 +68,9 @@ if ($ping) {
 say "Loading stash file";
 my $prefix_stash = retrieve("../stash/route-objects.storable");
 my %prefix_stash = %$prefix_stash;
+
+my $invalid_log = "../stash/invalids.log";
+open (my $INV_LOG, '>>', $invalid_log);
 
 say "And here we go!";
 my $DEBUG = shift;
@@ -91,11 +90,11 @@ sub digest_and_write {
   foreach my $announcement ( @{ $hash->{announcements} }[0] ) { #returns array of hashes
    
     my $tags = {
-      nexthop      => $announcement->{next_hop},
-      origin_as    => $origin_as,
-      peer         => $hash->{peer},
+      #nexthop      => $announcement->{next_hop},
+      #origin_as    => $origin_as,
+      #peer         => $hash->{peer},
       source       => "ris",
-      peer_as      => $hash->{peer_asn},
+      #peer_as      => $hash->{peer_asn},
       validity     => "valid" 
     };
 
@@ -109,7 +108,6 @@ sub digest_and_write {
     $tags->{validity} = "valid_less_spec";
     push @influx_lines, data2line($METRIC, $result->{valid_ls}, $tags);
     #push @influx_lines, data2line($METRIC, $prefix->{valid_ls}, $tags);
- 
   }
   
   $DB::single = 1;
@@ -143,6 +141,7 @@ sub check_prefixes_irr {
       $count_valid_ls++;
       say "$prefix with $origin_as is covered by a less specific" if $DEBUG;
     } else {
+      say $INV_LOG "$origin_as announced invalid prefix $prefix!";
       $count_invalid++;
     }
   }
