@@ -17,16 +17,35 @@ my $asn    = shift;
 if ( !($asn =~ /AS/) ) {
   $asn = "AS$asn";
 }
+check_prefix($prefix, $asn);
 
-my $start = time;
-if ($stash{$prefix}->{$asn}) {
-  say "valid";
-} else {
-  say "invalid. Possible origin-asns:";
-  foreach (sort keys %{ $stash{$prefix} }) {
-    say "$_";
+#while (1) {
+#  say "Enter prefix";
+#  my $prefix = <>;
+#  say "Enter ASN";
+#  my $asn = <>;
+#  if ( !($asn =~ /AS/) ) {
+#    $asn = "AS$asn";
+#  }
+#  check_prefix($prefix, $asn);
+#}
+
+#check_prefix('136.156.0.0/16', 'AS786');
+
+sub check_prefix {
+  my $prefix = shift;
+  my $asn = shift;
+  my $start = time;
+  if ($stash->{direct}->{$prefix}->{$asn}) {
+    say "valid, exact match";
+  } elsif ($stash->{expanded}->{$prefix}->{$asn}) {
+    say "valid, covered by less specific";
+  } else {
+    say "invalid. Possible origin-asns:";
+    foreach (sort keys %{ $stash->{direct}->{$prefix} }) {
+      say "$_";
+    }
   }
+  my $duration = time - $start;
+  say "duration: Found after $duration";
 }
-
-my $duration = time - $start;
-say "duration: Found after $duration";

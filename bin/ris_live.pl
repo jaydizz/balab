@@ -22,12 +22,6 @@ use 5.24.1;
 #TODO: LWP und InfluxHTTP durch Mojo POST ersetzen.
 
 #
-# Stash-Files usw.
-#
-
-my $prefix_stash = retrieve("../stash/route-objects.storable");
-my %prefix_stash = %$prefix_stash;
-#
 # RIS-Live parameters
 #
 my $prefix;
@@ -71,7 +65,15 @@ if ($ping) {
 #my $ra_db = 'whois.radb.net';
 #my $WHOIS = Net::IRR->connect( host => $ra_db ) or die "can't connect to $ra_db\n";
 
+#
+# Stash-Files usw.
+#
 
+say "Loading stash file";
+my $prefix_stash = retrieve("../stash/route-objects.storable");
+my %prefix_stash = %$prefix_stash;
+
+say "And here we go!";
 my $DEBUG = shift;
 
 #
@@ -104,6 +106,8 @@ sub digest_and_write {
     push @influx_lines, data2line($METRIC, $result->{invalid}, $tags);
     $tags->{validity} = "not_found";
     push @influx_lines, data2line($METRIC, $result->{not_found}, $tags);
+    $tags->{validity} = "valid_less_spec";
+    push @influx_lines, data2line($METRIC, $result->{valid_ls}, $tags);
     #push @influx_lines, data2line($METRIC, $prefix->{valid_ls}, $tags);
  
   }
@@ -113,7 +117,7 @@ sub digest_and_write {
    \@influx_lines,
    database    => "test_measure"
   );
-  say "Successfully wrote dataset!" unless ($res);
+  say "Error writing dataset\n $res" unless ($res);
 }  
 
 
@@ -129,15 +133,17 @@ sub check_prefixes_irr {
   my $count_not_found = 0;
 
   foreach my $prefix ( @{ $prefix_hash } ) {
-    if (!$prefix_stash{$prefix}) {
-      #say "$prefix with $origin_as is not found";
+    if (!$prefix_stash->{direct}->{$prefix} && !$prefix_stash->{expanded}->{$prefix}) {
+      say "$prefix with $origin_as is not found" if $DEBUG;
       $count_not_found++;
-    } elsif ($prefix_stash{$prefix}->{$origin_as}) {
-      #say "$prefix with $origin_as is valid";
+    } elsif ($prefix_stash->{direct}->{$prefix}->{$origin_as}) {
+      say "$prefix with $origin_as is valid" if $DEBUG;
       $count_valid++;
+    } elsif ($prefix_stash->{expanded}->{$prefix}->{$origin_as} ) {
+      $count_valid_ls++;
+      say "$prefix with $origin_as is covered by a less specific" if $DEBUG;
     } else {
       $count_invalid++;
-      #say "$prefix with $origin_as is invalid";
     }
   }
   return {
@@ -154,21 +160,21 @@ sub check_prefixes_irr {
 # Beginning of main
 #
 while(1) {
-my $ua  = Mojo::UserAgent->new;
-$ua->inactivity_timeout(0);
-$ua->websocket('ws://ris-live.ripe.net/v1/ws/?client=ba-test' => sub {
-  my ($ua, $tx) = @_;
-  say 'WebSocket handshake failed!' and return unless $tx->is_websocket;
-  $tx->on(json => sub {
-    my ($tx, $hash) = @_;
-    digest_and_write($hash->{data});
-    #$tx->finish;
+  my $ua  = Mojo::UserAgent->new;
+  $ua->inactivity_timeout(0);
+  $ua->websocket('ws://ris-live.ripe.net/v1/ws/?client=ba-test' => sub {
+    my ($ua, $tx) = @_;
+    say 'WebSocket handshake failed!' and return unless $tx->is_websocket;
+    $tx->on(json => sub {
+      my ($tx, $hash) = @_;
+      digest_and_write($hash->{data});
+      #$tx->finish;
+    });
+    $tx->on(finish => sub {
+      my ($tx, $code, $reason) = @_;
+      say "WebSocket closed with status $code.";
+    });
+    $tx->send($settings);
   });
-  $tx->on(finish => sub {
-    my ($tx, $code, $reason) = @_;
-    say "WebSocket closed with status $code.";
-  });
-  $tx->send($settings);
-});
-Mojo::IOLoop->start unless Mojo::IOLoop->is_running;
+  Mojo::IOLoop->start unless Mojo::IOLoop->is_running;
 }

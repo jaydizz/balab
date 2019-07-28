@@ -19,6 +19,7 @@ use strict;
 use warnings;
 use Getopt::Std;
 use Storable;
+use NetAddr::IP;
 use 5.10.0;
 
 my %opts;
@@ -30,8 +31,7 @@ my $debug_flag = $opts{d} || undef;
 
 
 my @files = glob($input_dir);
-my %stash;
-my $stash = \%stash;
+my $stash;
 
 foreach my $file (@files) {
   say "Processing file: $file";
@@ -40,30 +40,72 @@ foreach my $file (@files) {
  
   open( my $FH, '<', $file ) or die "could not open file $file";
   #Temporary Variables to hold matches.
-  my $prefix;
+  my $net_addr; #everything before the /
+  my $mask;     #everything after the /
   my $origin_as;
   my $routeobject_found;
+  my $prefix;
+  
   
   while (<$FH>) { 
     #if ($_ =~ /route:\s+(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/\d+)/) { 
-    if ($_ =~ /route[6:]+\s+([\d:\.\/a-f]+)/) { 
-    
-      $prefix = $1;
+    if ($_ =~ /route[6:]+\s+([\d:\.a-f]+)\/(\d+)/) { 
+       
+      $net_addr = $1;
+      $mask = $2;
+      $prefix = "$1/$2";
       $routeobject_found = 1;
     } 
     if ( $routeobject_found && $_ =~ /origin:\s+(AS\d+)/ ) {
       $origin_as = $1;
-      $stash{$prefix}->{$origin_as} = 1 ;
+      $stash->{direct}->{$prefix}->{$origin_as} = 1 ;
+      
+      #If we found a prefix shorter than /24
+      # we expand it, to make lookup for longer prefixes easier.
+      # Split it in all possible smaller prefixes.  
+      if ( $mask < 24 ) {  
+        if ($debug_flag) {
+          say "expanding prefix $prefix";
+        }
+        my $cidr = NetAddr::IP->new($prefix);
+      
+        # We split it up until there are only /24's left.
+        for (; $mask <= 24; $mask++) { 
+          my $split_ref;
+          
+          #Handle possible NetAddr::IP Excetions 
+          eval {
+            $split_ref = $cidr->splitref($mask);
+          };
+          if ($@) {
+            warn "NetAddr::IP Excetption: $@ at:\n $prefix split into $mask";
+            last;
+          }
+            
+          #Push them all in the hashref
+          foreach my $prefix ( @{ $split_ref } ) {
+            $stash->{expanded}->{$prefix}->{$origin_as} = 1;
+          }
+        }
+      }
+
       $routeobject_found = 0;
+    
       if ($debug_flag) {
         say "found $prefix : $origin_as";
       }
       $counter++;
+      ($mask, $origin_as, $prefix) = undef; 
+      
+      #Add some verbosity
+      if (($counter % 1000 ) == 0) {
+        last if $debug_flag;
+        my $duration = time - $start;
+        say "processed $counter prefixes in $duration seconds";
+    }
+    
     }
 
-    if ($counter > 50 && $debug_flag) {
-      last;
-    }
   }
   close ($FH);
   my $duration = time - $start;
