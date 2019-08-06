@@ -2,53 +2,71 @@
 
 use strict;
 use warnings;
+use Net::Patricia;
+use NetAddr::IP;
 use 5.10.0;
 use Storable;
+use Time::HiRes qw(gettimeofday tv_interval);
 
-my $stash;
+my $ptv4 = retrieve('../../stash/irr-patricia-v4.storable');
+my $ptv6 = retrieve('../../stash/irr-patricia-v6.storable');
 
-$stash = retrieve('../../stash/route-objects.storable');
- 
-my %stash = %$stash;
-
-my $prefix = shift or die("We needs arguments");
-my $asn    = shift;
-
-if ( !($asn =~ /AS/) ) {
-  $asn = "AS$asn";
-}
-check_prefix($prefix, $asn);
-
-#while (1) {
-#  say "Enter prefix";
-#  my $prefix = <>;
-#  say "Enter ASN";
-#  my $asn = <>;
-#  if ( !($asn =~ /AS/) ) {
-#    $asn = "AS$asn";
-#  }
-#  check_prefix($prefix, $asn);
+#my $prefix = shift or die("We needs arguments");
+#my $asn    = shift;
+#
+#if ( !($asn =~ /AS/) ) {
+#  $asn = "AS$asn";
 #}
+#check_prefix($prefix, $asn);
+
+while (1) {
+  say "Enter prefix";
+  my $prefix = <>;
+  say "Enter ASN";
+  my $asn = <>;
+  
+  chomp($prefix);
+  chomp($asn);
+  if ( !($asn =~ /AS/) ) {
+    $asn = "AS$asn";
+  }
+  check_prefix($prefix, $asn);
+}
 
 #check_prefix('136.156.0.0/16', 'AS786');
 
 sub check_prefix {
   my $prefix = shift;
   my $asn = shift;
-  my $start = time;
-  if ($stash->{direct}->{$prefix}->{$asn}) {
-    say "valid, exact match";
-  } elsif ($stash->{expanded}->{$prefix}->{$asn}) {
-    say "valid, covered by less specific";
+  my $t0 = [gettimeofday];
+
+      
+  my $match;
+
+  if ( (index $prefix, ":")  > 0) {
+    $match = $ptv6->match_string($prefix); 
   } else {
-    say "invalid. Possible origin-asns:";
-    foreach (sort keys %{ $stash->{expanded}->{$prefix} }) {
-      say "$_";
-    }
-    foreach (sort keys %{ $stash->{direct}->{$prefix} }) {
-      say "$_";
-    }
+    $match = $ptv4->match_string($prefix); 
   }
-  my $duration = time - $start;
+
+  $prefix =~ /.*\/(\d+)/;
+  my $prefix_length = $1;
+
+  
+  if ( $match ) {
+    if ( $match->{$asn} ) {
+      if ( $match->{length} == $prefix_length ) {
+        say "Prefix $match->{prefix} matches exactly";
+      } else {
+        say "Prefix ist covered by less specific $match->{prefix}";
+      }
+    } else {
+      say "Invalid!";
+    }
+  } else {
+   say "not found!";
+  }
+  
+  my $duration = tv_interval ( $t0, [gettimeofday]);
   say "duration: Found after $duration";
 }
