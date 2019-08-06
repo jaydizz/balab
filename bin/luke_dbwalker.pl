@@ -27,8 +27,8 @@ my %opts;
 getopts( 'i:o:d:b:r', \%opts ) or usage();
 
 my $irr_dir  = $opts{i} || '../db/irr/*';
-my $irr_flag = $opts{b} || 0;
-my $rpki_flag = $opts{r} || 0;
+my $irr_flag = $opts{b} ||  1;
+my $rpki_flag = $opts{r} || 1;
 my $rpki_dir  = $opts{p} || '../db/rpki/*';
 my $output_dir = $opts{o} || '../stash/';
 my $debug_flag = $opts{d} || undef;
