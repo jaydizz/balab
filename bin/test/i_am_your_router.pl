@@ -11,13 +11,13 @@ use Time::HiRes qw(gettimeofday tv_interval);
 my $ptv4 = retrieve('../../stash/irr-patricia-v4.storable');
 my $ptv6 = retrieve('../../stash/irr-patricia-v6.storable');
 
-#my $prefix = shift or die("We needs arguments");
-#my $asn    = shift;
-#
-#if ( !($asn =~ /AS/) ) {
-#  $asn = "AS$asn";
-#}
-#check_prefix($prefix, $asn);
+my $prefix = shift or die("We needs arguments");
+my $asn    = shift;
+
+if ( !($asn =~ /AS/) ) {
+  $asn = "AS$asn";
+}
+check_prefix($prefix, $asn);
 
 while (1) {
   say "Enter prefix";
@@ -54,14 +54,19 @@ sub check_prefix {
 
   
   if ( $match ) {
-    if ( $match->{$asn} ) {
+  $DB::single = 1;
+    if ( $match->{$asn}) {
       if ( $match->{length} == $prefix_length ) {
         say "Prefix $match->{prefix} matches exactly";
       } else {
         say "Prefix ist covered by less specific $match->{prefix}";
       }
     } else {
-      say "Invalid!";
+      say "Invalid! Possible ASs:";
+      foreach my $as ( keys %$match ) {
+        print "$as ";
+      }
+      print "\n";
     }
   } else {
    say "not found!";

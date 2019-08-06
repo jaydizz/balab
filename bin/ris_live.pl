@@ -139,13 +139,13 @@ sub digest_and_write {
     
     
     push @influx_lines, data2line($METRIC_RPKI, $rpki_result->{valid},  $tags_rpki);
-    $tags_rpki->{validitiy} = "valid_ls";
+    $tags_rpki->{validity} = "valid_ls";
     push @influx_lines, data2line($METRIC_RPKI, $rpki_result->{valid_ls},  $tags_rpki);
-    $tags_rpki->{validitiy} = "invalid_ml";
+    $tags_rpki->{validity} = "invalid_ml";
     push @influx_lines, data2line($METRIC_RPKI, $rpki_result->{invalid_ml},  $tags_rpki);
-    $tags_rpki->{validitiy} = "invalid";
+    $tags_rpki->{validity} = "invalid";
     push @influx_lines, data2line($METRIC_RPKI, $rpki_result->{invalid},  $tags_rpki);
-    $tags_rpki->{validitiy} = "not_found";
+    $tags_rpki->{validity} = "not_found";
     push @influx_lines, data2line($METRIC_RPKI, $rpki_result->{not_found},  $tags_rpki);
     
   }
