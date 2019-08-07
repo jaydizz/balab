@@ -59,13 +59,25 @@ my $stash_rpki_v6;
 my @irr_files = glob($irr_dir);
 my @rpki_files = glob($rpki_dir);
 
+# Remove directories and sh scripts.
+@irr_files = grep { -f $_ } @irr_files;
+@irr_files = grep {!/\.sh/} @irr_files;
+@rpki_files = grep { -f $_ } @rpki_files;
+@rpki_files = grep {!/\.sh/} @rpki_files;
+
+############################################################################
+#######################  MAIN ##############################################
+############################################################################
+
+print_intro_header();
 #
 # Iterating over all routing-dbs and parsing for route-objects.
 # This populates the stashes for v4 and v6.
 #
 if ($irr_flag) {
+  print_header("IRR");
   foreach my $file (@irr_files) {
-    say "Processing file: $file";
+    logger("Processing file: $file", 'yellow');
     my $start = time;
     my $counter = 0;
    
@@ -130,18 +142,16 @@ if ($irr_flag) {
         if (($counter % 1000 ) == 0) {
           last if $debug_flag;
           my $duration = time - $start;
-          print "processed $counter route-objects in $duration seconds           \r";
-          STDOUT->flush();
+          logger_no_newline("processed $counter route-objects in $duration seconds");
         }
         $routeobject_found = 0;
       
       }
     }
+    print "\n";
     close ($FH);
     my $duration = time - $start;
-    say color('green');
-    say "Done. It took $duration seconds to find $counter prefixes";
-    say color('reset');
+    logger("Done. It took $duration seconds to find $counter prefixes", 'green');
   }
   #
   # Now we write the stash_irr into a Patricia Trie. This is neccessary, because we have to store multiple
@@ -154,72 +164,21 @@ if ($irr_flag) {
 }
 
 #
-# Sub that digests a given hashref. 
-# First sorts the hasref by_cidr.
-# Then resolv containment-issues: If a less-spec prefix covers a more spec, 
-# all origin attributes are additionally inherited by the more-spec.
-# Then builds a Patricia-Trie from the data and stores it to disk.
+#
+#  Process RPKI shizzle.
+#
+#
 #
 
-sub digest_irr_and_write {
-  my $stash_ref = shift;
-
-  my $af_inet;
-  my @sorted;
-
-  #First we need the hasref as an array for sorting. 
-  foreach my $prefix (keys %$stash_ref) {
-    push @sorted, $stash_ref->{$prefix};
-  }
-
-  @sorted = sort by_cidr @sorted; #Make it fit the name!
-  
-  $af_inet = $sorted[0]->{version};
-  
-  my $i = 0;
-  #
-  # Sorted is in format a,a1,a2,b,b1,b2...
-  # All IP-spaces that can contain themselfes consecutetively stored.
-  # As soon as the next prefix is not contained by the previous one, 
-  # we can skip to the next one.
-  #
-
-  while ( $i < $#sorted ) {
-    my $j = $i + 1; #We look at the next entry in the sorted list.
-    while ( is_subset($sorted[$j], $sorted[$i] ) ) {
-      $sorted[$j]->{less_spec} = $sorted[$i]->{origin};
-      $j++;
-    }
-    $i = $j++;
-  }
-
-  my $pt;
-
-  if ($af_inet == AF_INET) {
-   $pt = new Net::Patricia;
-  } else {
-   $pt = new Net::Patricia AF_INET6;
-  }
-
-  foreach my $prefix (@sorted) {
-    $pt->add_string($prefix->{prefix}, $prefix);
-  }
-   
-  my $store = $af_inet == AF_INET ? $irr_out_v4 : $irr_out_v6;
-  store ( $pt, $store );
-}
-      
-
-
 if ($rpki_flag) {
-  say "Now walking over rpki dir";
-  
+  print_header("RPKI"); 
   #Preocess each rpki-file
   foreach my $file (@rpki_files) {
-    say "Processing $file";
+    logger("Processing file: $file");
+    my $start = time;
+    my $counter = 0; 
     open (my $FH, '<', $file);
     my $header = <$FH>; # stripping the header. 
-    
     
     while (<$FH>) {
       my ($origin_as, $prefix, $max_length) = split /,/, $_;
@@ -231,7 +190,14 @@ if ($rpki_flag) {
         $stash_rpki_v4->{$prefix}->{$origin_as}->{max_length} = $max_length;
         $stash_rpki_v4->{$prefix}->{prefix} = $prefix;
       }
+      if (($counter % 1000 ) == 0) {
+        last if $debug_flag;
+        my $duration = time - $start;
+        logger_no_newline("processed $counter ROAs in $duration seconds");
+      }
+      $counter++;
     } 
+    print "\n"  #Flush stdout.
   } 
   
   # Contruct the tree
@@ -249,4 +215,134 @@ if ($rpki_flag) {
 
   store ($pt_rpki_v4, "$rpki_out_v4");
   store ($pt_rpki_v6, "$rpki_out_v6");
-} 
+}
+
+
+
+#
+# Sub that digests a given hashref. 
+# First sorts the hasref by_cidr.
+# Then resolv containment-issues: If a less-spec prefix covers a more spec, 
+# all origin attributes are additionally inherited by the more-spec.
+# Then builds a Patricia-Trie from the data and stores it to disk.
+#
+
+sub digest_irr_and_write {
+  logger("Digesting IRR Hash.");
+  my $stash_ref = shift;
+
+  my $af_inet;
+  my @sorted;
+
+  logger("Sorting....");
+  #First we need the hasref as an array for sorting. 
+  foreach my $prefix (keys %$stash_ref) {
+    push @sorted, $stash_ref->{$prefix};
+  }
+
+  @sorted = sort by_cidr @sorted; #Make it fit the name!
+  
+  $af_inet = $sorted[0]->{version};
+  logger("Done. Got AF_INET $af_inet."); 
+  logger("Resolving implicit Coverage."); 
+  my $i = 0;
+  #
+  # Sorted is in format a,a1,a2,b,b1,b2...
+  # All IP-spaces that can contain themselfes consecutetively stored.
+  # As soon as the next prefix is not contained by the previous one, 
+  # we can skip to the next one.
+  #
+  
+  while ( $i < $#sorted ) {
+    my $j = $i + 1; #We look at the next entry in the sorted list.
+    while ( is_subset($sorted[$j], $sorted[$i] ) ) {
+      $sorted[$j]->{less_spec} = $sorted[$i]->{origin};
+      $j++;
+    }
+    $i = $j++;
+  }
+
+  my $pt;
+  logger("Creating and Writing the Trie.");
+  if ($af_inet == AF_INET) {
+   $pt = new Net::Patricia;
+  } else {
+   $pt = new Net::Patricia AF_INET6;
+  }
+
+  foreach my $prefix (@sorted) {
+    $pt->add_string($prefix->{prefix}, $prefix);
+  }
+   
+  my $store = $af_inet == AF_INET ? $irr_out_v4 : $irr_out_v6;
+  store ( $pt, $store );
+  logger("Done.", 'green');
+}
+
+sub logger {
+  my $msg = shift;
+  my $color = shift || 'reset';
+  my $time = get_formated_time(); 
+  print "$time";
+  print color('reset');
+  print color($color);
+  say "$msg";
+  print color('reset');
+}
+
+sub logger_no_newline {
+  my $msg = shift;
+  my $color = shift || 'reset';
+  my $time = get_formated_time(); 
+  print "$time";
+  print color('reset');
+  print color($color);
+  print "$msg                                  \r";
+  STDOUT->flush();
+  print color('reset');
+}
+
+sub print_intro_header {
+  my $db = shift;
+  my $time = get_formated_time(); 
+  my $msg =<<"EOF";
+ ________________________  
+|        .......       LS|
+|      ::::::;;::.       |
+|    .::;::::;::::.      |
+|   .::::::::::::::      |
+|   ::`_```_```;:::.     |
+|   ::=-) :=-`  ::::     |
+| `::|  / :     `:::     |
+|   '|  `~'     ;:::     |
+|    :-:==-.   / :'      |      LUKE DBWALKER v1.0
+|    `. _    .'.d8:      |
+| _.  |88bood88888._     |
+|~  `-+8888888888P  `-. _|
+|-'     ~~^^^^~~  `./8 ~ |
+|8b /  /  |   \  \  `8   |
+|P        `          8   |
+|                    8b  |
+|                    `8  |
+|                     8b |
+|         .           `8 |
+|________/_\___________8_|
+EOF
+  print $msg;
+}
+
+sub print_header {
+  my $db = shift;
+  my $time = get_formated_time(); 
+  my $msg =<<"EOF";
+$time========================================
+$time         Now Processing $db 
+$time========================================
+EOF
+  print $msg;
+}
+
+sub get_formated_time {
+  my ($sec, $min, $h) = localtime(time);
+  my $time = sprintf '%02d:%02d:%02d : ', $h, $min, $sec;
+}
