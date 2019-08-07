@@ -29,6 +29,8 @@ use 5.10.0;
 my %opts;
 getopts( 'i:o:d:b:r', \%opts ) or usage();
 
+our $VERSION = "1.0";
+
 my $irr_dir  = $opts{i} || '../db/irr/*';
 my $irr_flag = $opts{b} ||  1;
 my $rpki_flag = $opts{r} || 1;
@@ -306,27 +308,31 @@ sub print_intro_header {
   my $db = shift;
   my $time = get_formated_time(); 
   my $msg =<<"EOF";
- ________________________  
-|        .......       LS|
-|      ::::::;;::.       |
-|    .::;::::;::::.      |
-|   .::::::::::::::      |
-|   ::`_```_```;:::.     |
-|   ::=-) :=-`  ::::     |
-| `::|  / :     `:::     |
-|   '|  `~'     ;:::     |
-|    :-:==-.   / :'      |      LUKE DBWALKER v1.0
-|    `. _    .'.d8:      |
-| _.  |88bood88888._     |
-|~  `-+8888888888P  `-. _|
-|-'     ~~^^^^~~  `./8 ~ |
-|8b /  /  |   \  \  `8   |
-|P        `          8   |
-|                    8b  |
-|                    `8  |
-|                     8b |
-|         .           `8 |
-|________/_\___________8_|
+
+                    ____
+                  (xXXXX|xx======---(-
+                  /     |
+                 /    XX|
+                /xxx XXX|     LUKE DBWALKER PARSES IN LESS THAN TWO PARSECS.
+               /xxx X   |
+              / ________|
+      __ ____/_|_|_______\\_
+  ###|=||________|_________|_
+      ~~   |==| __  _  __   /|~~~~~~~~~-------------_______
+           |==| ||(( ||()| | |XXXXXXXX|                    >
+      __   |==| ~~__~__~~__ \\|_________-------------~~~~~~~
+  ###|=||~~~~~~~~|_______  |"
+      ~~ ~~~~\\~|~|       /~
+              \\ ~~~~~~~~~
+               \\xxx X   |
+                \\xxx XXX|
+                 \\    XX|                
+                  \\     |                Version: $VERSION.
+                  (xXXXX|xx======---(-   Github: https://git.io/fjQD5
+                    ~~~~                   
+Graphic stolen from http://www.ascii-art.de/ascii/s/starwars.txt
+By Phil Powell
+
 EOF
   print $msg;
 }
