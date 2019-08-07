@@ -55,18 +55,28 @@ sub check_prefix {
   
   if ( $match ) {
   $DB::single = 1;
-    if ( $match->{$asn}) {
+    if ( $match->{origin}->{$asn}) {
       if ( $match->{length} == $prefix_length ) {
         say "Prefix $match->{prefix} matches exactly";
       } else {
-        say "Prefix ist covered by less specific $match->{prefix}";
+        say "Prefix is explicitely covered by less specific $match->{prefix}";
       }
     } else {
-      say "Invalid! Possible ASs:";
-      foreach my $as ( keys %$match ) {
-        print "$as ";
+      if ( $match->{less_spec}->{$asn} ) {
+        say "Prefix is implicitely covered by a less specific" ;
+      } else {
+        say "Invalid! Possible ASs directly covering:";
+        foreach my $as ( keys %{ $match->{origin} } ) {
+          print "$as ";
+        }
+        print "\n";
+        say "By implicetly covered by less spec by: ";
+        foreach my $as ( keys %{ $match->{less_spec} } ) {
+          print "$as ";
+        }
+
+        print "\n";
       }
-      print "\n";
     }
   } else {
    say "not found!";
