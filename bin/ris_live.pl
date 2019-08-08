@@ -307,7 +307,7 @@ sub check_prefixes_irr {
           $count_valid_ls++;
         }
       } else { # Might be invalid.
-        if ( $pt_return->{less_spec}->{$origin_as} ) { #Prefix is implicitely covered by less-spec. 
+        if ( $pt_return->{implicit}->{$origin_as} ) { #Prefix is implicitely covered by less-spec. 
           $count_valid_impl++;
         } else { #We tried everything but... 
           say $INV_LOG "$origin_as announced invalid prefix $prefix!";

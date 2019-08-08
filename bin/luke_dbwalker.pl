@@ -14,12 +14,12 @@ The Patricia Trie holds IP-objects. On Match, a hashref is returned, holding val
 ./luke_dbwalker.pl [OPTIONS]
 
 OPTIONS:
- i    - /path/to/irr/files    defaults to: ../db/irr/ 
- p    - /path/to/rPki/files   defaults to: ../db/rpki/
- o    - /path/to/output/dir   defaults to: ../stash/
- b    - Process IRR-files     defaults to: 1
- r    - Process RPKI-files    defaults to: 1
- d    - debug. Gets _really_ chatty.
+  i    - /path/to/irr/files    defaults to: ../db/irr/ 
+  p    - /path/to/rPki/files   defaults to: ../db/rpki/
+  o    - /path/to/output/dir   defaults to: ../stash/
+  b    - Process IRR-files     defaults to: 1
+  r    - Process RPKI-files    defaults to: 1
+  d    - debug. Gets _really_ chatty.
  
 If no arguments are given, ../db and ../stash will be used
 
@@ -268,7 +268,7 @@ sub digest_irr_and_write {
   while ( $i < $#sorted ) {
     my $j = $i + 1; #We look at the next entry in the sorted list.
     while ( is_subset($sorted[$j], $sorted[$i] ) ) {
-      $sorted[$j]->{less_spec} = $sorted[$i]->{origin};
+      $sorted[$j]->{implicit} = $sorted[$i]->{origin};
       $j++;
     }
     $i = $j++;
