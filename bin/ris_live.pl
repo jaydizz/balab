@@ -235,21 +235,21 @@ sub check_prefixes_rpki {
         my $max_length = $pt_return->{$origin_as}->{max_length};
 
         if ($max_length == $prefix_length) { #Valid, exakt match
-          say "$prefix with $origin_as is rpki-valid with an exact match!" if $DEBUG;
+          logger("RPKI: $prefix with $origin_as is rpki-valid with an exact match!") if $DEBUG;
           $count_valid++;
         } elsif ($max_length > $prefix_length) { #Valid, not exact
-          say "$prefix with $origin_as is rpki-valid with an less-spec match!" if $DEBUG;
+          logger("RPKI: $prefix with $origin_as is rpki-valid with an less-spec match!") if $DEBUG;
           $count_valid_ls++;
         } elsif ($max_length < $prefix_length) { #Too specific!
-          say "$prefix with $origin_as is rpki-invalid: $prefix_length is longer than max $max_length" if $DEBUG;
+          logger("RPKI: $prefix with $origin_as is rpki-invalid: $prefix_length is longer than max $max_length") if $DEBUG;
           $count_invalid_ml++;
         }
       } else { #Didn't find AS. Invalid... 
-          say "$prefix with $origin_as is rpki-invalid: AS is not allowed to announce!" if $DEBUG;
+          logger("RPKI: $prefix with $origin_as is rpki-invalid: AS is not allowed to announce!") if $DEBUG;
           $count_invalid++;
       }
     } else { #Prefix not found... booring.
-      say "$prefix with $origin_as is not found" if $DEBUG;
+      logger("RPKI: $prefix with $origin_as is not found") if $DEBUG;
       $count_not_found++;   
     }
   }
@@ -300,10 +300,10 @@ sub check_prefixes_irr {
     if ( $pt_return) { #If defined, we found something. 
       if ( $pt_return->{origin}->{$origin_as} ) { #If the return Hash contains a key with the origin_as, it is valid
         if ( $pt_return->{length} == $prefix_length ) { # ro covers exactly
-          say "$prefix with $origin_as is valid, exact coverage!" if $DEBUG;
+          logger("IRR: $prefix with $origin_as is valid, exact coverage!") if $DEBUG;
           $count_valid++;
         } else { #Is explicitely covered by a less-spec. Means: No exact route-object!
-          say "$prefix with $origin_as is valid, less-specific coverage!" if $DEBUG;
+          logger("IRR: $prefix with $origin_as is valid, less-specific coverage!") if $DEBUG;
           $count_valid_ls++;
         }
       } else { # Might be invalid.
@@ -315,7 +315,7 @@ sub check_prefixes_irr {
         }
       }
    } else {
-      say "$prefix with $origin_as is not found" if $DEBUG;
+      logger("IRR: $prefix with $origin_as is not found") if $DEBUG;
       $count_not_found++;     
    }
   }    
