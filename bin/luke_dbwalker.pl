@@ -31,7 +31,6 @@ use strict;
 use warnings;
 use Getopt::Std;
 use Storable;
-use NetAddr::IP;
 use Net::Patricia;
 use Term::ANSIColor;
 use Local::addrinfo qw( by_cidr mk_iprange_lite mk_iprange is_subset);
@@ -231,6 +230,10 @@ if ($rpki_flag) {
   store ($pt_rpki_v6, "$rpki_out_v6");
 }
 
+exit(0);
+############################################################################
+#######################  END OF MAIN  ######################################
+############################################################################
 
 
 #
