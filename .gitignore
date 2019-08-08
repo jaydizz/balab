@@ -1,3 +1,4 @@
+!db/update_databases.sh
 *.swp
 db/*
 stash/*

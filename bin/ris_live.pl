@@ -8,11 +8,14 @@ use Term::ANSIColor;
 use Mojo::Transaction::WebSocket;
 use Mojo::UserAgent;
 use Mojo::JSON qw(decode_json encode_json);
+use Mojo::IOLoop::Signal;
 
 use InfluxDB::LineProtocol qw(data2line line2data);
 use InfluxDB::HTTP;
 
 use Storable;
+
+use File::Pid;
 
 use Net::Patricia;
 
@@ -26,6 +29,12 @@ our $VERSION = "1.0";
 #TODO: why is SSL not working?! FUCK!
 #TODO: LWP und InfluxHTTP durch Mojo POST ersetzen.
 
+# Create PID-File
+my $pidfile = File::Pid->new({
+  file => '/var/run/ris_live.pid',
+});
+
+$pidfile->write;
 print_intro_header(); #Say hello to the world!
 
 ##################################################
@@ -98,7 +107,23 @@ my $DEBUG = shift;
 #
 
 logger("Opening Websocket Connection...");
+
+
 while(1) {
+  Mojo::IOLoop::Signal->on(USR1 => sub {
+    my ($self, $name) = @_;
+    logger("Got USR1: Reloading the Patricia Trees.", 'yellow');
+    my $pt_irr_v4_tmp  = retrieve('../stash/irr-patricia-v4.storable');
+    my $pt_irr_v6_tmp  = retrieve('../stash/irr-patricia-v6.storable');
+    my $pt_rpki_v4_tmp = retrieve('../stash/rpki-patricia-v4.storable');
+    my $pt_rpki_v6_tmp = retrieve('../stash/rpki-patricia-v6.storable');
+    $pt_irr_v4   = $pt_irr_v4_tmp;
+    $pt_irr_v6   = $pt_irr_v6_tmp;
+    $pt_rpki_v4  = $pt_rpki_v4_tmp;
+    $pt_rpki_v6  = $pt_rpki_v6_tmp;
+    logger("Done");
+  });
+  
   my $ua  = Mojo::UserAgent->new;
   $ua->inactivity_timeout(0);
   $ua->websocket('ws://ris-live.ripe.net/v1/ws/?client=ba-test' => sub {
@@ -112,6 +137,8 @@ while(1) {
     $tx->on(finish => sub {
       my ($tx, $code, $reason) = @_;
       logger("WebSocket closed with status $code.", 'red');
+      $DB::single = 1;
+      Mojo::IOLoop->stop();
     });
     $tx->send($settings);
   });
@@ -119,6 +146,9 @@ while(1) {
   Mojo::IOLoop->start unless Mojo::IOLoop->is_running;
 }
 
+END {
+  $pidfile->remove;
+}
 
 
 
@@ -186,7 +216,6 @@ sub digest_and_write {
     
   }
   
-  $DB::single = 1;
   if ($DEBUG) {
     foreach (@influx_lines) {
       logger($_);
