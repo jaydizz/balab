@@ -1,0 +1,18 @@
+[Unit]
+Description=Ris Live Routing Validator
+After=network.service
+
+[Service]
+User=root
+Group=root
+Type=simple
+WorkingDirectory=/home/debian/ba/bin
+ExecStart=/home/debian/ba/bin/ris_live.pl
+ExecStop=/bin/kill $MAINPID
+ExecReload=/bin/kill -s USR1 $MAINPID
+ExecRestart=/bin/kill $MAINPID && /home/debian/ba/bin/ris_live.pl
+RestartSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

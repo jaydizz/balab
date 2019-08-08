@@ -108,21 +108,21 @@ my $DEBUG = shift;
 
 logger("Opening Websocket Connection...");
 
+Mojo::IOLoop::Signal->on(USR1 => sub {
+  my ($self, $name) = @_;
+  logger("Got USR1: Reloading the Patricia Trees.", 'yellow');
+  my $pt_irr_v4_tmp  = retrieve('../stash/irr-patricia-v4.storable');
+  my $pt_irr_v6_tmp  = retrieve('../stash/irr-patricia-v6.storable');
+  my $pt_rpki_v4_tmp = retrieve('../stash/rpki-patricia-v4.storable');
+  my $pt_rpki_v6_tmp = retrieve('../stash/rpki-patricia-v6.storable');
+  $pt_irr_v4   = $pt_irr_v4_tmp;
+  $pt_irr_v6   = $pt_irr_v6_tmp;
+  $pt_rpki_v4  = $pt_rpki_v4_tmp;
+  $pt_rpki_v6  = $pt_rpki_v6_tmp;
+  logger("Done");
+});
 
 while(1) {
-  Mojo::IOLoop::Signal->on(USR1 => sub {
-    my ($self, $name) = @_;
-    logger("Got USR1: Reloading the Patricia Trees.", 'yellow');
-    my $pt_irr_v4_tmp  = retrieve('../stash/irr-patricia-v4.storable');
-    my $pt_irr_v6_tmp  = retrieve('../stash/irr-patricia-v6.storable');
-    my $pt_rpki_v4_tmp = retrieve('../stash/rpki-patricia-v4.storable');
-    my $pt_rpki_v6_tmp = retrieve('../stash/rpki-patricia-v6.storable');
-    $pt_irr_v4   = $pt_irr_v4_tmp;
-    $pt_irr_v6   = $pt_irr_v6_tmp;
-    $pt_rpki_v4  = $pt_rpki_v4_tmp;
-    $pt_rpki_v6  = $pt_rpki_v6_tmp;
-    logger("Done");
-  });
   
   my $ua  = Mojo::UserAgent->new;
   $ua->inactivity_timeout(0);
@@ -389,6 +389,7 @@ sub logger {
   print color($color);
   say "$msg";
   print color('reset');
+  STDOUT->flush();
 }
 
 sub logger_no_newline {

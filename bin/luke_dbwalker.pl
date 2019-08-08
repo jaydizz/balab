@@ -11,17 +11,19 @@ The Patricia Trie holds IP-objects. On Match, a hashref is returned, holding val
 
 =head1 SYNOPSIS
 
-./luke_dbwalker.pl [OPTIONS]
+  ./luke_dbwalker.pl [OPTIONS]
 
-OPTIONS:
-  i    - /path/to/irr/files    defaults to: ../db/irr/ 
-  p    - /path/to/rPki/files   defaults to: ../db/rpki/
-  o    - /path/to/output/dir   defaults to: ../stash/
-  b    - Process IRR-files     defaults to: 1
-  r    - Process RPKI-files    defaults to: 1
-  d    - debug. Gets _really_ chatty.
- 
-If no arguments are given, ../db and ../stash will be used
+  OPTIONS:
+    i    - /path/to/Irr/files     [ ../db/irr/  ]
+    p    - /path/to/rPki/files    [ ../db/rpki/ ]
+    o    - /path/to/Output/dir    [ ../stash/   ]
+    b    - 
+            Process IRR-dB-files  [ true ]
+    r    - 
+            Process RPKI-files    [ true ]
+    d    -  
+            debug. Gets _really_ chatty.
+   
 
 =cut
 
