@@ -1,16 +1,26 @@
 #!/usr/bin/perl 
 
 =head1 NAME
+
 Luke Databasewalker
 
 =head1 ABSTRACT
 
-Tool to walk over IRR-Databases and extract route-objects. Builds a giant perl-hashmap to be loaded into RAM to be able to compute validity of Routing-Updates in Realtime. 
-Can additionally process vrps-data as exported by routinator.
+This Tool is used to walk over different routing databases and generates a patricia trie for route validation. The tool can parse IRR-Files in RPSL-format and PRKI-Roas as exported by routinator3000 inr vrps format. 
+The Patricia Trie holds IP-objects. On Match, a hashref is returned, holding validation-data.
+
 =head1 SYNOPSIS
 
-./luke_dbwalker.pl -i <directory> -o <stash>
+./luke_dbwalker.pl [OPTIONS]
 
+OPTIONS:
+ i    - /path/to/irr/files    defaults to: ../db/irr/ 
+ p    - /path/to/rPki/files   defaults to: ../db/rpki/
+ o    - /path/to/output/dir   defaults to: ../stash/
+ b    - Process IRR-files     defaults to: 1
+ r    - Process RPKI-files    defaults to: 1
+ d    - debug. Gets _really_ chatty.
+ 
 If no arguments are given, ../db and ../stash will be used
 
 =cut
@@ -31,10 +41,10 @@ getopts( 'i:o:d:b:r', \%opts ) or usage();
 
 our $VERSION = "1.0";
 
-my $irr_dir  = $opts{i} || '../db/irr/*';
+my $irr_dir  = $opts{i} || '../db/irr/';
 my $irr_flag = $opts{b} ||  1;
 my $rpki_flag = $opts{r} || 1;
-my $rpki_dir  = $opts{p} || '../db/rpki/*';
+my $rpki_dir  = $opts{p} || '../db/rpki/';
 my $output_dir = $opts{o} || '../stash/';
 my $debug_flag = $opts{d} || undef;
 
@@ -58,8 +68,8 @@ my $stash_irr_v6;
 my $stash_rpki_v4;
 my $stash_rpki_v6;
 
-my @irr_files = glob($irr_dir);
-my @rpki_files = glob($rpki_dir);
+my @irr_files = glob("$irr_dir*");
+my @rpki_files = glob("$rpki_dir*");
 
 # Remove directories and sh scripts.
 @irr_files = grep { -f $_ } @irr_files;
