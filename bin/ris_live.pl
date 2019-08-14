@@ -96,8 +96,10 @@ logger("Done.");
 # Storing Received Invalids for later analysis
 #
 
-my $invalid_log = "../stash/invalids.log";
+my $irr_invalid_log = "../stash/invalids.log";
+my $rpki_invalid_log = "../stash/rpki_invalids.log";
 open (my $INV_LOG, '>>', $invalid_log);
+open (my $RPKI_INV_LOG, '>>', $rpki_invalid_log);
 
 my $DEBUG = shift;
 
@@ -259,9 +261,9 @@ sub check_prefixes_rpki {
     my $prefix_length = ((split /\//, $prefix))[1]; 
     
     if ( $pt_return ) { #Lookup was successful. Prefix Exists in Tree
-      if ($pt_return->{$origin_as}) {  #Found Origin AS as allowed AS...
+      if ($pt_return->{origin}->{$origin_as}) {  #Found Origin AS as allowed AS...
         
-        my $max_length = $pt_return->{$origin_as}->{max_length};
+        my $max_length = $pt_return->{origin}->{$origin_as}->{max_length};
 
         if ($max_length == $prefix_length) { #Valid, exakt match
           logger("RPKI: $prefix with $origin_as is rpki-valid with an exact match!") if $DEBUG;
@@ -276,6 +278,7 @@ sub check_prefixes_rpki {
       } else { #Didn't find AS. Invalid... 
           logger("RPKI: $prefix with $origin_as is rpki-invalid: AS is not allowed to announce!") if $DEBUG;
           $count_invalid++;
+          file_logger($RPKI_INV_LOG, "$prefix with $origin_as is invalid!");
       }
     } else { #Prefix not found... booring.
       logger("RPKI: $prefix with $origin_as is not found") if $DEBUG;
@@ -339,7 +342,7 @@ sub check_prefixes_irr {
         if ( $pt_return->{implicit}->{$origin_as} ) { #Prefix is implicitely covered by less-spec. 
           $count_valid_impl++;
         } else { #We tried everything but... 
-          say $INV_LOG "$origin_as announced invalid prefix $prefix!";
+          file_logger($INV_LOG "$origin_as announced invalid prefix $prefix!");
           $count_invalid++;
         }
       }
@@ -380,7 +383,7 @@ sub get_formated_time {
   my $time = sprintf '%02d:%02d:%02d : ', $h, $min, $sec;
 }
 
-sub logger {
+sub file_logger {
   my $msg = shift;
   my $color = shift || 'reset';
   my $time = get_formated_time();
@@ -389,6 +392,15 @@ sub logger {
   print color($color);
   say "$msg";
   print color('reset');
+  STDOUT->flush();
+}
+
+sub logger {
+  my $msg = shift;
+  my $file = shift or die("No file specified in file_logger");
+  my $time = get_formated_time();
+  print $file "$time";
+  say   $file "$msg";
   STDOUT->flush();
 }
 

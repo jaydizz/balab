@@ -197,10 +197,10 @@ if ($rpki_flag) {
       my ($origin_as, $prefix, $max_length) = split /,/, $_;
       
       if ( (index $prefix, ":") > 0) {#v6
-        $stash_rpki_v6->{$prefix}->{$origin_as}->{max_length} = $max_length;
+        $stash_rpki_v6->{$prefix}->{origin}->{$origin_as}->{max_length} = $max_length;
         $stash_rpki_v6->{$prefix}->{prefix} = $prefix;
       } else { 
-        $stash_rpki_v4->{$prefix}->{$origin_as}->{max_length} = $max_length;
+        $stash_rpki_v4->{$prefix}->{origin}->{$origin_as}->{max_length} = $max_length;
         $stash_rpki_v4->{$prefix}->{prefix} = $prefix;
       }
       if (($counter % 1000 ) == 0) {

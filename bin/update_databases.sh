@@ -7,7 +7,7 @@
 
 
 cd /mount/storage/db/irr
-for f in *.db*; do mv "$f" old/""${f%}"_$(date '+%Y_%m_%d-%h')"; done
+for f in *.db*; do mv "$f" old/""${f%}"_$(date '+%Y_%m_%d-%H')"; done
 
 wget http://ftp.afrinic.net/pub/dbase/afrinic.db.gz
 wget ftp://ftp.arin.net/pub/rr/arin.db
@@ -20,7 +20,7 @@ wget ftp://ftp.apnic.net/pub/apnic/whois/apnic.db.route6.gz
 gunzip ./*
 
 cd ../rpki
-for f in *; do mv "$f" old/""${f%}"_$(date '+%Y_%m_%d-%h')"; done
+for f in *; do mv "$f" old/""${f%}"_$(date '+%Y_%m_%d-%H')"; done
 routinator vrps > current
 
 /home/debian/ba/bin/luke_filewalker.pl
