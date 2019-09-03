@@ -107,8 +107,14 @@ my $DEBUG = shift;
 #
 # Beginning of main
 #
+my $prefix_processed_in_interval; #We count processed prefixes. sometimes the websocket hangs. If this is zero after 5 minutes, we restart the socket. 
 
 logger("Opening Websocket Connection...");
+
+
+my $ua; #holds useragent 
+my $tx; #holds websocket.
+
 
 Mojo::IOLoop::Signal->on(USR1 => sub {
   my ($self, $name) = @_;
@@ -127,9 +133,9 @@ Mojo::IOLoop::Signal->on(USR1 => sub {
 while(1) {
   
   my $ua  = Mojo::UserAgent->new;
-  $ua->inactivity_timeout(0);
+  $ua->inactivity_timeout(20);
   $ua->websocket('ws://ris-live.ripe.net/v1/ws/?client=ba-test' => sub {
-    my ($ua, $tx) = @_;
+    ($ua, $tx) = @_;
     if ( !$tx->is_websocket ) {  
       logger('WebSocket handshake failed!', 'red');
       Mojo::IOLoop->stop();
@@ -147,6 +153,16 @@ while(1) {
     $tx->send($settings);
   });
   logger("Websocket opened! Ris-Live is now feeding us!");
+  # Register a timer to check if the websocket has become stale. 
+  Mojo::IOLoop->timer(300 => sub {
+    if ( $prefix_processed_in_interval == 0 ) {
+      Mojo::IOLoop->stop();
+      #$tx->finish;
+      logger('Closing stale websocket...', 'red');
+    }
+    $prefix_processed_in_interval = 0;
+  });
+
   Mojo::IOLoop->start unless Mojo::IOLoop->is_running;
 }
 
@@ -230,6 +246,7 @@ sub digest_and_write {
    database    => "test_measure"
   ) unless ($DEBUG);
   say "Error writing dataset\n $res" unless ($res);
+  $prefix_processed_in_interval++;
 }  
 
 #
