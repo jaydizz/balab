@@ -23,14 +23,15 @@ my $tmp_file = "./json.tmp";
 
 my $json;
 
-if ( -e $tmp_file ) {
-  $json = retrieve($tmp_file);  
-} else { 
-  my $curl = `curl -s -G 'http://localhost:8086/query' --data-urlencode "db=test_measure" --data-urlencode "q=SELECT sum(\"value\") FROM announce WHERE time >= now()-28d AND time < now() GROUP BY time(1d), \"validity\" fill(none)"`;
+
+#if ( -e $tmp_file ) {
+#  $json = retrieve($tmp_file);  
+#} else { 
+  my $curl = `curl  -G 'http://localhost:8086/query' --data-urlencode "db=test_measure" --data-urlencode "q=SELECT sum(\"value\") FROM announce_rpki WHERE time >= now()-28d AND time < now() GROUP BY time(1d), \"validity\" fill(none)"`;
   chomp $curl;
   $json = decode_json($curl);
-  store($json, $tmp_file);
-}
+ # store($json, $tmp_file);
+#}
 
 # Let's fucking roll with perl datastructures. YAY! 
 my $result = { }; # We extract all the valuable data to this hash.
