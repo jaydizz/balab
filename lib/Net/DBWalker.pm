@@ -92,6 +92,10 @@ sub process_irr {
   my $pt_irr = {
     v4 => _create_pt(_sort_and_resolv($stash_irr_v4)),
     v6 => _create_pt(_sort_and_resolv($stash_irr_v6)),
+    size => {
+      v4 => scalar keys $stash_irr_v4,
+      v6 => scalar keys $stash_irr_v6
+    }
   };
   
   return $pt_irr;
@@ -174,9 +178,9 @@ sub process_roas {
     logger("Using default layout for roa-files.") if $VERBOSE;
     $format = {
       delimiter => ',',
-      field1 => 'origin_as',
-      field2 => 'prefix',
-      filed3 => 'max_length'
+      origin_as => '0',
+      prefix => '1',
+      max_length => '2',
     };
   }
   croak("$format needs to be either a hash-ref or undef.") if !ref $format;
@@ -187,12 +191,17 @@ sub process_roas {
 
   #And here we go!
   foreach my $file (@{ $files }) {
-    _parse_roas($file, $stash_rpki_v4, $stash_rpki_v6);
+    _parse_roas($file, $stash_rpki_v4, $stash_rpki_v6, $format);
   }
   
   my $pt_rpki = {
     v4 => _create_pt(_sort_and_resolv($stash_rpki_v4)),
     v6 => _create_pt(_sort_and_resolv($stash_rpki_v6)),
+    size => {
+      v4 => scalar keys $stash_rpki_v4,
+      v6 => scalar keys $stash_rpki_v6
+    }
+
   };
 
   return $pt_rpki;
@@ -229,9 +238,10 @@ sub export_roas_as_json {
     logger("Using default layout for roa-files.") if $VERBOSE;
     $format = {
       delimiter => ',',
-      field1 => 'origin_as',
-      field2 => 'prefix',
-      filed3 => 'max_length'
+      origin_as => '0',
+      prefix => '1',
+      max_length => '2',
+      
     };
   }
   croak("$format needs to be either a hash-ref or undef.") if !ref $format;
@@ -330,6 +340,8 @@ sub _parse_roas {
   my $file = shift;
   my $stash_v4 = shift;
   my $stash_v6 = shift;
+  my $format = shift;
+
   
   logger("RPKI: Processing file: $file") if $VERBOSE;
 
@@ -341,8 +353,11 @@ sub _parse_roas {
   
 
   while (<$FH>) {
-      my ($origin_as, $prefix, $max_length) = split /,/, $_;
-
+      my @split = split /,/, $_;
+      
+      my $origin_as   = $split[$format->{'origin_as'} ];
+      my $prefix      = $split[$format->{'prefix'}    ];
+      my $max_length  = $split[$format->{'max_length'}];
       my $stash = (index $prefix, ":") > 0 ? $stash_v6 : $stash_v4;
 
       $stash->{$prefix}->{origin}->{$origin_as}->{max_length} = $max_length;
@@ -370,7 +385,7 @@ sub _parse_roas {
 
 sub _sort_and_resolv {
   my $stash_ref = shift;
-
+  
   logger("Digesting Hash.") if $VERBOSE;
 
 
@@ -415,10 +430,14 @@ sub _sort_and_resolv {
 
 sub _create_pt {
   my $nodes = shift;
-
-  my $af = @{ $nodes }[0]->{version};
+  
   my $pt;
   logger("Creating Trie.") if $VERBOSE;
+  my $af = @{ $nodes }[0]->{version};
+  if (!$af) {
+    logger("Found no valid records. Skipping.");
+    return new Net::Patricia AF_INET6;
+  }
   if ($af == AF_INET) {
    $pt = new Net::Patricia;
   } else {
