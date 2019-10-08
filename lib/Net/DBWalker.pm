@@ -93,8 +93,8 @@ sub process_irr {
     v4 => _create_pt(_sort_and_resolv($stash_irr_v4)),
     v6 => _create_pt(_sort_and_resolv($stash_irr_v6)),
     size => {
-      v4 => scalar keys $stash_irr_v4,
-      v6 => scalar keys $stash_irr_v6
+      v4 => scalar keys %$stash_irr_v4,
+      v6 => scalar keys %$stash_irr_v6
     }
   };
   
@@ -198,8 +198,8 @@ sub process_roas {
     v4 => _create_pt(_sort_and_resolv($stash_rpki_v4)),
     v6 => _create_pt(_sort_and_resolv($stash_rpki_v6)),
     size => {
-      v4 => scalar keys $stash_rpki_v4,
-      v6 => scalar keys $stash_rpki_v6
+      v4 => scalar keys %$stash_rpki_v4,
+      v6 => scalar keys %$stash_rpki_v6
     }
 
   };
