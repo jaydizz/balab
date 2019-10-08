@@ -12,8 +12,8 @@ our %EXPORT_TAGS = ( all => \@EXPORT_OK, );
 
 
 sub get_formated_time {
-  my ($sec, $min, $h) = localtime(time);
-  my $time = sprintf '%02d:%02d:%02d : ', $h, $min, $sec;
+  my ($sec, $min, $h, $mday, $mon, $year) = localtime(time);
+  my $time = sprintf '%04d-%02d-%02d:%02d:%02d:%02d : ', $year, $mon, $mday, $h, $min, $sec;
 }
 
 sub logger {

@@ -15,7 +15,7 @@ use InfluxDB::HTTP;
 
 use Storable;
 
-use Local::Logger qw(all);
+use Local::Logger qw(:all);
 
 use File::Pid;
 
