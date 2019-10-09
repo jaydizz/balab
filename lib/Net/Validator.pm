@@ -85,7 +85,7 @@ sub validate_irr($$$$) {
     $prefix_ref = \@tmp;
   }
   
-  if ( ! $asn =~/AS\d+/ ) {
+  if ( ! ($asn =~/AS\d+/) ) {
     $asn = "AS$asn";
   }
   
@@ -122,7 +122,7 @@ sub validate_rpki {
     $prefix_ref = \@tmp;
   }
   
-  if ( ! $asn =~/AS\d+/ ) {
+  if ( ! ($asn =~/AS\d+/) ) {
     $asn = "AS$asn";
   }
   
