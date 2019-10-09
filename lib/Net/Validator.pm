@@ -14,7 +14,7 @@ use 5.26.1;
 
 use Exporter 'import';
 our @EXPORT_OK =
-  qw(process_irr VERBOSE process_roas export_roas_as_json export_irr_as_json);
+  qw(validate_irr validate_rpki);
 our %EXPORT_TAGS = ( all => \@EXPORT_OK, );
 
 our $debug_flag = 0;
@@ -48,23 +48,32 @@ Nothing is exported by default. The following methods can be exported:
 
 our $VERBOSE = 0;
 our $LOG_INVALIDS = 0;
+our $RPKI_INV_LOG;
 our $INV_LOG;
+our $DEBUG = 0;
 
 =over 4
 
 =item B<$pt = validate_irr($prefix_ref, $asn, $pt_v4, $pt_v6)>
 
-Validates all prefix/asn tupels given in prefix-ref. Prefix-ref is either an array_ref/hash_Ref containing hashrefs as pecified below.
+Validates all prefix/asn tupels given in prefix-ref. Prefix-ref is an array_ref containing all prefixes that should be checked with a given origin_as. Can also be a scalar. 
+Returns:
 
-  $prefix_ref : [
-              
-    
+  {
+    valid     => $count_valid,
+    valid_ls  => $count_valid_ls,
+    valid_impl=> $count_valid_impl,
+    invalid   => $count_invalid,
+    not_found => $count_not_found
+  };
+            
+  
 =back
 
 =cut
 
 
-sub validate_irr($$$) {
+sub validate_irr($$$$) {
   my $prefix_ref = shift;
   my $asn        = shift;
   my $pt_v4      = shift;
@@ -76,16 +85,53 @@ sub validate_irr($$$) {
     $prefix_ref = \@tmp;
   }
   
-  if ( ! $ans =~/AS\d+/ ) {
-    $asn = "AS$ans";
+  if ( ! $asn =~/AS\d+/ ) {
+    $asn = "AS$asn";
   }
   
   return _validate_irr($prefix_ref, $asn, $pt_v4, $pt_v6);
 }
 
-sub _validate_irr {
+=over 4
+
+=item B<$pt = validate_rpki($prefix_ref, $asn, $pt_v4, $pt_v6)>
+
+Validates all prefix/asn tupels given in prefix-ref. Prefix-ref is an array_ref containing all prefixes that should be checked with a given origin_as. Can also be a scalar. 
+Returns:
+  
+  {
+    valid => $count_valid,
+    valid_ls => $count_valid_ls,
+    invalid  => $count_invalid,
+    invalid_ml => $count_invalid_ml,
+    not_found  => $count_not_found
+  };
+=back
+
+=cut
+
+sub validate_rpki {
   my $prefix_ref = shift;
   my $asn        = shift;
+  my $pt_v4      = shift;
+  my $pt_v6      = shift;
+  
+  if (! ref $prefix_ref ) {
+    my @tmp;
+    push @tmp, $prefix_ref;
+    $prefix_ref = \@tmp;
+  }
+  
+  if ( ! $asn =~/AS\d+/ ) {
+    $asn = "AS$asn";
+  }
+  
+  return _validate_rpki($prefix_ref, $asn, $pt_v4, $pt_v6);
+}
+
+sub _validate_irr {
+  my $prefix_ref = shift;
+  my $origin_as  = shift;
   my $pt_v4      = shift;
   my $pt_v6      = shift;
   
@@ -136,6 +182,61 @@ sub _validate_irr {
 
 
 
+sub _validate_rpki {
+  
+  my $prefix_ref = shift;
+  my $origin_as = shift;
+  my $pt_v4 = shift;
+  my $pt_v6 = shift;
+
+  my $count_valid = 0;    #Valid
+  my $count_valid_ls = 0; #Valid, covered becaus of max-length
+
+  my $count_invalid = 0;
+  my $count_invalid_ml = 0; #Invalid, Max-length!
+
+  my $count_not_found = 0;
+
+  foreach my $prefix ( @{ $prefix_ref } ) {
+    # Decide, whether we have v4/v6
+    my $pt_return = _is_ipv6($prefix) ? $pt_v6->match_string($prefix) : $pt_v4->match_string($prefix);  
+    my $prefix_length = _get_prefix_length($prefix);
+
+    if ( $pt_return ) { #Lookup was successful. Prefix Exists in Tree
+      if ($pt_return->{origin}->{$origin_as}) { #Did we find an AS-key?
+        my $max_length = $pt_return->{origin}->{$origin_as}->{max_length};
+        if ( $prefix_length le $max_length ) {
+          if ( $pt_return->{origin}->{$origin_as}->{implicit} ) {
+            logger("RPKI: $prefix with $origin_as is rpki-valid with an less-spec match!") if $DEBUG;
+            $count_valid_ls++;
+          } else {
+            logger("RPKI: $prefix with $origin_as is rpki-valid with an exact match!") if $DEBUG;
+            $count_valid++;
+          }
+        } else {
+            logger("RPKI: $prefix with $origin_as is rpki-invalid: $prefix_length is longer than max $max_length") if $DEBUG;
+            $count_invalid_ml++;
+        }
+      } else {
+        logger("RPKI: $prefix with $origin_as is rpki-invalid: AS is not allowed to announce!") if $DEBUG;
+        $count_invalid++;
+        file_logger($RPKI_INV_LOG, "$prefix with $origin_as is invalid!") if $LOG_INVALIDS;
+      }
+    } else {
+      logger("RPKI: $prefix with $origin_as is not found") if $DEBUG;
+      $count_not_found++;
+    }
+  }
+  return {
+    valid => $count_valid,
+    valid_ls => $count_valid_ls,
+    invalid  => $count_invalid,
+    invalid_ml => $count_invalid_ml,
+    not_found  => $count_not_found
+  };
+}
+
+
 sub _get_prefix_length {
   my $prefix = shift;
   
@@ -147,7 +248,8 @@ sub _is_ipv6 {
   my $prefix = shift;
   
   if ( (index $prefix, ":")  > 0) {
-    return 1:
+    return 1;
   }
   return 0;
 }
+1;
