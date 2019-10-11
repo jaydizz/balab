@@ -43,7 +43,7 @@ getopts( 'fi:o:db:r:p:', \%opts ) or usage();
 
 our $VERSION = "1.0";
 
-$Net::DBWalker::VERBOSE = 1;
+$Net::DBWalker::VERBOSE = 0;
 
 my $irr_dir  = '../../db/irr/old/';
 my $output_dir = '../../stash/historic/irr/';
@@ -77,7 +77,7 @@ chomp @irr_files;
 #######################  MAIN ##############################################
 ############################################################################
 
-print_intro_header();
+#print_intro_header();
 #
 #
 #  Process RPKI shizzle.
@@ -89,22 +89,20 @@ print_intro_header();
 
 # We only process every 10th file. These are soo many!
 
-print_header("IRR"); 
-logger("Processing " .  " files");
+#print_header("IRR"); 
+#logger("Processing " .  " files");
 
-open (my $STATS, '>' ,"$output_dir/stats/stats.txt") or die(" could not open $output_dir/stats/stats.txt");
 
   
 my $pt_irr = process_irr(\@irr_files);
-logger("Storing Files"); 
+#logger("Storing Files"); 
 store $pt_irr->{v4}, "$output_dir//$year-$month-$day-irrv4.storable" unless $DEBUG;
 store $pt_irr->{v6}, "$output_dir//$year-$month-$day-irrv6.storable" unless $DEBUG;
 
-print $STATS "$year-$month-$day\t\t\t" . $pt_irr->{size}->{v4} . "\t\t\t" . $pt_irr->{size}->{v6} . "\n";
+print "$year-$month-$day\t\t\t" . $pt_irr->{size}->{v4} . "\t\t\t" . $pt_irr->{size}->{v6} . "\n";
 
-logger("...DONE...", 'green');
+#logger("...DONE...", 'green');
 
-close $STATS;
 
 exit(0);
 ############################################################################
