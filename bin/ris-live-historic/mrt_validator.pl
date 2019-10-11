@@ -12,7 +12,7 @@ use Net::Patricia;
 use Net::Validator qw( :all );
 use Local::Logger qw( logger_no_newline );
 use Storable qw (retrieve);
-
+use Data::Dumper;
 use 5.26.1;
 
 
@@ -55,17 +55,28 @@ while (my $dd = Net::MRT::mrt_read_next($mrt))
 {
   if ( $dd->{type} == 13 && ( $dd->{subtype} == 2 || $dd->{subtype} == 4 ) ) 
   {
+    next if is_invalid_prefix($dd->{prefix}); #Sometimes there is craaaap in the routes.
     foreach my $entry ( $dd->{entries}->@* ) 
     {
       my $origin_as = $entry->{AS_PATH}[-1];
-      if (ref $origin_as) #Sometime the last entry of the AS-Path is an array, since as BGP-Speaker can append its own AS multiple times to the path.  
+      if ( ref $origin_as ) #Sometime the last entry of the AS-Path is an array, since as BGP-Speaker can append its own AS multiple times to the path. 
       { 
         next;
         #$origin_as = @{$entry->{entries}{AS_PATH}[-1]} [-1];
       }
       $count->{total}++;
       
-      add_hashes( validate_rpki( $dd->{prefix}, $origin_as, $pt_v4, $pt_v6)); 
+      eval {
+        add_hashes( validate_rpki( $dd->{prefix}, $origin_as, $pt_v4, $pt_v6)); 
+      };
+      if ($@) {
+        warn "Invalid Key occured. $file\n";
+        warn "==========DD=================================================================\n";
+        warn Dumper $dd;
+        warn "==========Prefix=================================================================\n";
+        warn $dd->{prefix};
+     }   
+        
     }
   }
   if (!($count->{total} % 1000) ) 
@@ -76,7 +87,7 @@ while (my $dd = Net::MRT::mrt_read_next($mrt))
 
 print "\n" if $VERBOSE;;
 my $header = "#";
-my $line = "";
+my $line = "$year-$month-$day,";
 foreach my $key (sort keys %$count) {
   next if $key eq "total";
   $header = $header . "$key,";
@@ -92,3 +103,7 @@ sub add_hashes {
   }
 } 
 
+sub is_invalid_prefix {
+  my $prefix = shift;
+  return ( $prefix eq "::" );
+}
