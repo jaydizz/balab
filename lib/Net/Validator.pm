@@ -143,8 +143,13 @@ sub _validate_irr {
   my $count_valid_impl = 0;
   
   foreach my $prefix ( @{ $prefix_ref } ) {
-  
-    my $pt_return = _is_ipv6($prefix) ? $pt_v6->match_string($prefix) : $pt_v4->match_string($prefix);  
+    my $pt_return;
+    eval { 
+      $pt_return = _is_ipv6($prefix) ? $pt_v6->match_string($prefix) : $pt_v4->match_string($prefix);  
+    };
+    if ($@) {
+      die ("Invalid Key: $prefix");
+    }
     my $prefix_length = _get_prefix_length($prefix);
     
     if ( $pt_return) { #If defined, we found something. 
@@ -171,7 +176,6 @@ sub _validate_irr {
   } 
   return {
     valid     => $count_valid,
-    valid_ms  => $count_valid_ms,
     valid_ls  => $count_valid_ls,
     valid_impl=> $count_valid_impl,
     invalid   => $count_invalid,
