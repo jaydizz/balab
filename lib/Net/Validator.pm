@@ -193,9 +193,9 @@ sub _validate_rpki {
   my $pt_v4 = shift;
   my $pt_v6 = shift;
 
-  my $count_valid = 0;    #Valid
-  my $count_valid_ls = 0; #Valid, covered becaus of max-length
-
+  my $count_valid      = 0;    #Valid
+  my $count_valid_ls   = 0; #Valid, covered becaus of max-length
+  my $count_valid_impl = 0;
   my $count_invalid = 0;
   my $count_invalid_ml = 0; #Invalid, Max-length!
 
@@ -209,17 +209,24 @@ sub _validate_rpki {
     if ( $pt_return ) { #Lookup was successful. Prefix Exists in Tree
       if ($pt_return->{origin}->{$origin_as}) { #Did we find an AS-key?
         my $max_length = $pt_return->{origin}->{$origin_as}->{max_length};
-        if ( $prefix_length le $max_length ) {
-          if ( $pt_return->{origin}->{$origin_as}->{implicit} ) {
-            logger("RPKI: $prefix with $origin_as is rpki-valid with an less-spec match!") if $DEBUG;
-            $count_valid_ls++;
-          } else {
+        given ( $prefix_length cmp $max_length ) {
+          when ( $_ == 0 ) {
             logger("RPKI: $prefix with $origin_as is rpki-valid with an exact match!") if $DEBUG;
             $count_valid++;
           }
-        } else {
+          when ( $_ < 0 ) {
+            if ( $pt_return->{origin}->{$origin_as}->{implicit} ) {
+              logger("RPKI: $prefix with $origin_as is rpki-valid with an less-spec match!") if $DEBUG;
+              $count_valid_impl++;
+            } else {
+              logger("RPKI: $prefix with $origin_as is rpki-valid with an less-spec match!") if $DEBUG;
+              $count_valid_ls++;
+            }
+          }
+          when ( $_ > 0 ) {
             logger("RPKI: $prefix with $origin_as is rpki-invalid: $prefix_length is longer than max $max_length") if $DEBUG;
             $count_invalid_ml++;
+          }
         }
       } else {
         logger("RPKI: $prefix with $origin_as is rpki-invalid: AS is not allowed to announce!") if $DEBUG;
@@ -234,6 +241,7 @@ sub _validate_rpki {
   return {
     valid => $count_valid,
     valid_ls => $count_valid_ls,
+    valid_impl => $count_valid_impl,
     invalid  => $count_invalid,
     invalid_ml => $count_invalid_ml,
     not_found  => $count_not_found
