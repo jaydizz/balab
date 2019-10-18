@@ -29,6 +29,7 @@ my $count = {
     valid_ls    => 0,
     invalid     => 0,
     invalid_ml  => 0,
+    valid_impl  => 0,
     not_found   => 0,
     total       => 0,
 };

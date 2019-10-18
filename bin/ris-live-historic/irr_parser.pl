@@ -66,6 +66,8 @@ if ($date =~ /2019_(\d{2})_(\d{2})-00/) {
 
 # Input sanitation.
 
+exit(0) if (-e "$output_dir//$year-$month-$day-irrv4.storable" );
+
 my @irr_files = `find $irr_dir`;
 chomp @irr_files;
 # Remove directories and sh scripts and limit to files from a certain date.
@@ -93,7 +95,7 @@ warn("Too few files for $date") if scalar @irr_files < 3;
 #print_header("IRR"); 
 #logger("Processing " .  " files");
 
-
+ 
   
 my $pt_irr = process_irr(\@irr_files);
 #logger("Storing Files"); 

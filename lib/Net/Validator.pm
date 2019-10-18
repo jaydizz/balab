@@ -1,6 +1,7 @@
 package Net::Validator;
 
 our $VERSION = '1.15';
+use experimental qw( switch );
 
 use lib "./";
 use Net::Patricia;
