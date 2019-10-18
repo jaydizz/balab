@@ -142,6 +142,7 @@ sub _validate_irr {
   my $count_invalid = 0;
   my $count_not_found = 0;
   my $count_valid_impl = 0;
+  my @pts;
   
   foreach my $prefix ( @{ $prefix_ref } ) {
     my $pt_return;
@@ -154,6 +155,7 @@ sub _validate_irr {
     my $prefix_length = _get_prefix_length($prefix);
     
     if ( $pt_return) { #If defined, we found something. 
+      push @pts, $pt_return;
       if ( $pt_return->{origin}->{$origin_as} ) { #If the return Hash contains a key with the origin_as, it is valid
         my $as_hash = $pt_return->{origin}->{$origin_as};
         if ( $as_hash->{implicit} ) {
@@ -180,7 +182,8 @@ sub _validate_irr {
     valid_ls  => $count_valid_ls,
     valid_impl=> $count_valid_impl,
     invalid   => $count_invalid,
-    not_found => $count_not_found
+    not_found => $count_not_found,
+    pt        => \@pts
   };
   
 }
@@ -201,17 +204,18 @@ sub _validate_rpki {
   my $count_invalid_ml = 0; #Invalid, Max-length!
 
   my $count_not_found = 0;
-
+  my @pts;;
   foreach my $prefix ( @{ $prefix_ref } ) {
     # Decide, whether we have v4/v6
     my $pt_return = _is_ipv6($prefix) ? $pt_v6->match_string($prefix) : $pt_v4->match_string($prefix);  
     my $prefix_length = _get_prefix_length($prefix);
 
     if ( $pt_return ) { #Lookup was successful. Prefix Exists in Tree
+      push @pts, $pt_return;
       if ($pt_return->{origin}->{$origin_as}) { #Did we find an AS-key?
         my $max_length = $pt_return->{origin}->{$origin_as}->{max_length};
         given ( $prefix_length cmp $max_length ) {
-          when ( $_ == 0 ) {
+          when ( $_ == 0 || $prefix_length == _get_prefix_length($pt_return->{prefix})) {
             logger("RPKI: $prefix with $origin_as is rpki-valid with an exact match!") if $DEBUG;
             $count_valid++;
           }
@@ -245,7 +249,8 @@ sub _validate_rpki {
     valid_impl => $count_valid_impl,
     invalid  => $count_invalid,
     invalid_ml => $count_invalid_ml,
-    not_found  => $count_not_found
+    not_found  => $count_not_found,
+    pt         => \@pts
   };
 }
 
