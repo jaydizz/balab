@@ -94,6 +94,7 @@ foreach my $key (keys %$rpki_return) {
     if ($key eq "invalid") {
       print "Possible ASNs:\n";
       foreach my $origin_as (keys %{ @{$rpki_return->{pt}}[0]->{origin}}) {
+        $DB::single = 1;
         print "\t$origin_as source: @{ $rpki_return->{pt}}[0]->{origin}->{$origin_as}->{source} \n";
       }
       print "\n";

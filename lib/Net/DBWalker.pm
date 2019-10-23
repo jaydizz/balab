@@ -361,6 +361,7 @@ sub _parse_roas {
       my $stash = (index $prefix, ":") > 0 ? $stash_v6 : $stash_v4;
 
       $stash->{$prefix}->{origin}->{$origin_as}->{max_length} = $max_length;
+      $stash->{$prefix}->{origin}->{$origin_as}->{source} = $file;
       $stash->{$prefix}->{prefix} = $prefix;
 
       my $ip_range = mk_iprange($prefix);
