@@ -46,7 +46,7 @@ our $VERSION = "1.0";
 
 $Net::DBWalker::VERBOSE = 1;
 
-my $irr_dir  = $opts{i} || '../db/irr_test/';
+my $irr_dir  = $opts{i} || '../db/irr/';
 my $irr_flag = defined $opts{b} ? $opts{b} : 1;
 say $irr_flag;
 my $rpki_flag = defined $opts{r} ? $opts{r} : 1;
