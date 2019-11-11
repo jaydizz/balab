@@ -1,0 +1,3358 @@
+10344 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+10963 did not reach us for reason: stars
+	AS_PATH:X,6503,6503,6503,6503,6503
+	FILTERING_AS: 6503
+12834 did not reach us for reason: stars
+	AS_PATH:X,2119,2119
+	FILTERING_AS: 2119
+13100 did not reach us for reason: host_unreach
+	AS_PATH:36914
+	FILTERING_AS: 36914
+15098 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+15355 did not reach us for reason: network_unreach
+	AS_PATH:X,12779
+	FILTERING_AS: 12779
+17673 did not reach us for reason: stars
+	AS_PATH:X,2119
+	FILTERING_AS: 2119
+18085 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+18805 did not reach us for reason: stars
+	AS_PATH:X,X,X,X,47438,47438
+	FILTERING_AS: 47438
+19202 did not reach us for reason: stars
+	AS_PATH:62353
+	FILTERING_AS: 62353
+19257 did not reach us for reason: stars
+	AS_PATH:X,39647,39647
+	FILTERING_AS: 39647
+19304 did not reach us for reason: stars
+	AS_PATH:62225,2116,3356,3356,3356
+	FILTERING_AS: 3356
+19420 did not reach us for reason: stars
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+24345 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+2630 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+26849 did not reach us for reason: network_unreach
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+2797 did not reach us for reason: network_unreach
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+28869 did not reach us for reason: network_unreach
+	AS_PATH:X,3265,3265
+	FILTERING_AS: 3265
+30720 did not reach us for reason: stars
+	AS_PATH:197595,197595
+	FILTERING_AS: 197595
+31728 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+3188 did not reach us for reason: stars
+	AS_PATH:35612
+	FILTERING_AS: 35612
+3267 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+34341 did not reach us for reason: stars
+	AS_PATH:2119,2119
+	FILTERING_AS: 2119
+4639 did not reach us for reason: network_unreach
+	AS_PATH:1124,1124
+	FILTERING_AS: 1124
+50003 did not reach us for reason: network_unreach
+	AS_PATH:X,1103,1103,1103,1103,1103,1103,1103,1103,1103
+	FILTERING_AS: 1103
+50202 did not reach us for reason: stars
+50384 did not reach us for reason: stars
+	AS_PATH:X,174,174,174,174,174,174,174,174,553,553
+	FILTERING_AS: 553
+50442 did not reach us for reason: stars
+	AS_PATH:X,7018,7018
+	FILTERING_AS: 7018
+50773 did not reach us for reason: stars
+	AS_PATH:X,X,7018,7018,7018
+	FILTERING_AS: 7018
+50970 did not reach us for reason: stars
+	AS_PATH:X,X
+	FILTERING_AS: X
+51217 did not reach us for reason: network_unreach
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+51310 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+51812 did not reach us for reason: stars
+	AS_PATH:X,X,7018,7018,7018
+	FILTERING_AS: 7018
+52064 did not reach us for reason: stars
+	AS_PATH:X,7018,7018,7018
+	FILTERING_AS: 7018
+6357 did not reach us for reason: stars
+	AS_PATH:39138,39138
+	FILTERING_AS: 39138
+6413 did not reach us for reason: network_unreach
+	AS_PATH:34549
+	FILTERING_AS: 34549
+6519 did not reach us for reason: stars
+	AS_PATH:41495
+	FILTERING_AS: 41495
+6581 did not reach us for reason: stars
+	AS_PATH:197540,47147
+	FILTERING_AS: 47147
+AS 39647  1 hits!
+AS 1103  1 hits!
+AS 39138  1 hits!
+AS 41495  1 hits!
+AS 62353  1 hits!
+AS 34549  1 hits!
+AS 12779  1 hits!
+AS 36914  1 hits!
+AS 197595  1 hits!
+AS 3356  1 hits!
+AS 553  1 hits!
+AS 6503  1 hits!
+AS 1124  1 hits!
+AS 47147  1 hits!
+AS 47438  1 hits!
+AS X  2 hits!
+AS 2119  3 hits!
+AS 3265  5 hits!
+AS 35612  5 hits!
+AS 7018  7 hits!
+10001 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+10022 did not reach us for reason: network_unreach
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+11841 did not reach us for reason: stars
+	AS_PATH:12322
+	FILTERING_AS: 12322
+12992 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+13476 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+14279 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+14695 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+14746 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+15011 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+15098 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+16812 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+17673 did not reach us for reason: stars
+	AS_PATH:X,2119
+	FILTERING_AS: 2119
+17715 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+17918 did not reach us for reason: network_unreach
+	AS_PATH:X,33885,33885
+	FILTERING_AS: 33885
+18644 did not reach us for reason: stars
+	AS_PATH:X,2119,2119
+	FILTERING_AS: 2119
+19420 did not reach us for reason: stars
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+19651 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+19661 did not reach us for reason: stars
+	AS_PATH:X,39637,39637,39637,39637,2914,2914,2914,3356,3356,3356
+	FILTERING_AS: 3356
+20105 did not reach us for reason: stars
+20458 did not reach us for reason: host_unreach
+	AS_PATH:2613,2613
+	FILTERING_AS: 2613
+21299 did not reach us for reason: stars
+	AS_PATH:197540,47147
+	FILTERING_AS: 47147
+21516 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+22288 did not reach us for reason: stars
+	AS_PATH:X,X,7018,7018,7018
+	FILTERING_AS: 7018
+22801 did not reach us for reason: stars
+	AS_PATH:X,X,X,7018,7018
+	FILTERING_AS: 7018
+22976 did not reach us for reason: network_unreach
+	AS_PATH:X,25058
+	FILTERING_AS: 25058
+23067 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+24522 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+24932 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+25019 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+2719 did not reach us for reason: stars
+	AS_PATH:X,7018,7018
+	FILTERING_AS: 7018
+29049 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+29605 did not reach us for reason: stars
+	AS_PATH:X,174,174,174,174,174,174,174,174,553,553
+	FILTERING_AS: 553
+30207 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+31625 did not reach us for reason: stars
+	AS_PATH:X,X,201011
+	FILTERING_AS: 201011
+31645 did not reach us for reason: stars
+	AS_PATH:2119
+	FILTERING_AS: 2119
+32038 did not reach us for reason: stars
+	AS_PATH:X,2119
+	FILTERING_AS: 2119
+32421 did not reach us for reason: stars
+	AS_PATH:X,7018,7018
+	FILTERING_AS: 7018
+34156 did not reach us for reason: stars
+	AS_PATH:7018,7018
+	FILTERING_AS: 7018
+34631 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+34879 did not reach us for reason: stars
+	AS_PATH:X,27828,X,X
+	FILTERING_AS: X
+35701 did not reach us for reason: stars
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+4651 did not reach us for reason: stars
+	AS_PATH:50901,50901
+	FILTERING_AS: 50901
+50456 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+51193 did not reach us for reason: network_unreach
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+51312 did not reach us for reason: stars
+	AS_PATH:X,1403,X
+	FILTERING_AS: X
+51588 did not reach us for reason: stars
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+51920 did not reach us for reason: stars
+	AS_PATH:X,2119
+	FILTERING_AS: 2119
+AS 201011  1 hits!
+AS 33885  1 hits!
+AS 5408  1 hits!
+AS 3356  1 hits!
+AS 12322  1 hits!
+AS 553  1 hits!
+AS 50901  1 hits!
+AS 47147  1 hits!
+AS 25058  1 hits!
+AS 2613  1 hits!
+AS 35612  5 hits!
+AS 2119  5 hits!
+AS 3265  7 hits!
+AS X  8 hits!
+AS 7018  11 hits!
+10609 did not reach us for reason: stars
+	AS_PATH:44395,X,X
+	FILTERING_AS: X
+10667 did not reach us for reason: stars
+	AS_PATH:39029,X,39029
+	FILTERING_AS: 39029
+10782 did not reach us for reason: network_unreach
+	AS_PATH:X,3265,3265
+	FILTERING_AS: 3265
+11768 did not reach us for reason: stars
+	AS_PATH:X,5410,5410
+	FILTERING_AS: 5410
+16284 did not reach us for reason: stars
+	AS_PATH:39647,39647
+	FILTERING_AS: 39647
+17673 did not reach us for reason: stars
+	AS_PATH:X,2119
+	FILTERING_AS: 2119
+17998 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+18354 did not reach us for reason: network_unreach
+	AS_PATH:X,7018,7018
+	FILTERING_AS: 7018
+19960 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+20667 did not reach us for reason: stars
+	AS_PATH:X,X,33885,33885
+	FILTERING_AS: 33885
+20734 did not reach us for reason: network_unreach
+	AS_PATH:X,7018,7018,7018
+	FILTERING_AS: 7018
+20792 did not reach us for reason: host_unreach
+	AS_PATH:20677
+	FILTERING_AS: 20677
+21295 did not reach us for reason: host_unreach
+	AS_PATH:59752,59752
+	FILTERING_AS: 59752
+22505 did not reach us for reason: stars
+	AS_PATH:2833
+	FILTERING_AS: 2833
+22801 did not reach us for reason: stars
+	AS_PATH:X,X,X,7018,7018
+	FILTERING_AS: 7018
+23036 did not reach us for reason: stars
+	AS_PATH:X,7018,20057,20057
+	FILTERING_AS: 20057
+24432 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+24523 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+24932 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+25019 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+26942 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+27460 did not reach us for reason: network_unreach
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+28202 did not reach us for reason: stars
+	AS_PATH:X,X,7018,7018
+	FILTERING_AS: 7018
+28869 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+30427 did not reach us for reason: stars
+30621 did not reach us for reason: stars
+31645 did not reach us for reason: stars
+	AS_PATH:2119
+	FILTERING_AS: 2119
+31757 did not reach us for reason: stars
+	AS_PATH:X,X,X,X,X,X,X,X,X,X,201011,201011
+	FILTERING_AS: 201011
+33317 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+33404 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+34156 did not reach us for reason: stars
+	AS_PATH:7018,7018
+	FILTERING_AS: 7018
+35670 did not reach us for reason: stars
+	AS_PATH:X,174,174,174,174,174,174,174,174,553,553
+	FILTERING_AS: 553
+4501 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+50177 did not reach us for reason: stars
+	AS_PATH:X,X,8823,8823,8823,201011
+	FILTERING_AS: 201011
+50202 did not reach us for reason: stars
+50684 did not reach us for reason: network_unreach
+	AS_PATH:198611
+	FILTERING_AS: 198611
+51193 did not reach us for reason: network_unreach
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+51471 did not reach us for reason: stars
+	AS_PATH:X,2119
+	FILTERING_AS: 2119
+51596 did not reach us for reason: network_unreach
+	AS_PATH:X,X,X
+	FILTERING_AS: X
+6413 did not reach us for reason: network_unreach
+	AS_PATH:34549
+	FILTERING_AS: 34549
+AS 59752  1 hits!
+AS 553  1 hits!
+AS 20677  1 hits!
+AS 5410  1 hits!
+AS 39647  1 hits!
+AS 34549  1 hits!
+AS 20057  1 hits!
+AS 39029  1 hits!
+AS 2833  1 hits!
+AS 198611  1 hits!
+AS 33885  1 hits!
+AS 201011  2 hits!
+AS 35612  2 hits!
+AS 2119  3 hits!
+AS X  4 hits!
+AS 7018  7 hits!
+AS 3265  8 hits!
+10005 did not reach us for reason: host_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+10015 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+10807 did not reach us for reason: stars
+	AS_PATH:45494
+	FILTERING_AS: 45494
+10814 did not reach us for reason: network_unreach
+	AS_PATH:237,237,237,237,237
+	FILTERING_AS: 237
+10923 did not reach us for reason: stars
+	AS_PATH:201281,201281,6939,6939,6939
+	FILTERING_AS: 6939
+10988 did not reach us for reason: stars
+	AS_PATH:6939
+	FILTERING_AS: 6939
+11162 did not reach us for reason: stars
+11171 did not reach us for reason: stars
+	AS_PATH:7018
+	FILTERING_AS: 7018
+11207 did not reach us for reason: network_unreach
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+11504 did not reach us for reason: stars
+	AS_PATH:4739,7545,7545,7545,7545,7545,6453,6453,6453,6453,6453,6453,6453,6453,6453,6453,6453,6453,3320,3320,3320,60169,8881,8881,8881,553,553
+	FILTERING_AS: 553
+11563 did not reach us for reason: stars
+11711 did not reach us for reason: host_unreach
+	AS_PATH:198060
+	FILTERING_AS: 198060
+12143 did not reach us for reason: network_unreach
+	AS_PATH:16591
+	FILTERING_AS: 16591
+12175 did not reach us for reason: stars
+	AS_PATH:1103
+	FILTERING_AS: 1103
+12642 did not reach us for reason: host_unreach
+	AS_PATH:25478
+	FILTERING_AS: 25478
+12988 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+13358 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+13666 did not reach us for reason: network_unreach
+	AS_PATH:7922
+	FILTERING_AS: 7922
+13823 did not reach us for reason: stars
+14004 did not reach us for reason: stars
+	AS_PATH:3333,3333,1200,6939,6939
+	FILTERING_AS: 6939
+14042 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+14075 did not reach us for reason: host_unreach
+	AS_PATH:4773
+	FILTERING_AS: 4773
+14114 did not reach us for reason: host_unreach
+	AS_PATH:46562
+	FILTERING_AS: 46562
+14274 did not reach us for reason: host_unreach
+	AS_PATH:5607
+	FILTERING_AS: 5607
+14468 did not reach us for reason: stars
+14604 did not reach us for reason: network_unreach
+	AS_PATH:4922,4922,4922
+	FILTERING_AS: 4922
+14661 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+15011 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+15257 did not reach us for reason: stars
+15633 did not reach us for reason: network_unreach
+	AS_PATH:680,680
+	FILTERING_AS: 680
+15795 did not reach us for reason: stars
+16812 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+17554 did not reach us for reason: stars
+	AS_PATH:5408,5408
+	FILTERING_AS: 5408
+17715 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+18189 did not reach us for reason: stars
+	AS_PATH:4796
+	FILTERING_AS: 4796
+18284 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+18651 did not reach us for reason: stars
+	AS_PATH:31479,31479
+	FILTERING_AS: 31479
+18819 did not reach us for reason: stars
+	AS_PATH:28878,28878,28878,28878
+	FILTERING_AS: 28878
+19459 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+19710 did not reach us for reason: stars
+	AS_PATH:45131,45131,45131
+	FILTERING_AS: 45131
+20180 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+20326 did not reach us for reason: stars
+20410 did not reach us for reason: host_unreach
+	AS_PATH:38229
+	FILTERING_AS: 38229
+20456 did not reach us for reason: stars
+20560 did not reach us for reason: network_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+2071 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+20767 did not reach us for reason: stars
+	AS_PATH:2119,2119,2119,2119
+	FILTERING_AS: 2119
+21470 did not reach us for reason: stars
+21577 did not reach us for reason: network_unreach
+	AS_PATH:224,224,224,224,224
+	FILTERING_AS: 224
+22079 did not reach us for reason: stars
+	AS_PATH:15965
+	FILTERING_AS: 15965
+22759 did not reach us for reason: host_unreach
+	AS_PATH:5607
+	FILTERING_AS: 5607
+22958 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+23646 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+23813 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+23825 did not reach us for reason: network_unreach
+	AS_PATH:200490,200490,200490
+	FILTERING_AS: 200490
+23907 did not reach us for reason: network_unreach
+	AS_PATH:208059
+	FILTERING_AS: 208059
+24147 did not reach us for reason: stars
+24345 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+24744 did not reach us for reason: host_unreach
+	AS_PATH:395592
+	FILTERING_AS: 395592
+25516 did not reach us for reason: host_unreach
+	AS_PATH:262145
+	FILTERING_AS: 262145
+25605 did not reach us for reason: stars
+	AS_PATH:37100
+	FILTERING_AS: 37100
+25711 did not reach us for reason: stars
+25752 did not reach us for reason: stars
+2580 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+25915 did not reach us for reason: stars
+	AS_PATH:201723,201723,201723
+	FILTERING_AS: 201723
+26102 did not reach us for reason: host_unreach
+	AS_PATH:8468
+	FILTERING_AS: 8468
+26514 did not reach us for reason: host_unreach
+	AS_PATH:3265
+	FILTERING_AS: 3265
+26725 did not reach us for reason: stars
+	AS_PATH:136548,136548,136548,136548,136548,136548,136548
+	FILTERING_AS: 136548
+26849 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+26911 did not reach us for reason: network_unreach
+	AS_PATH:12897
+	FILTERING_AS: 12897
+27889 did not reach us for reason: stars
+	AS_PATH:199399
+	FILTERING_AS: 199399
+28119 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+28159 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+28339 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+28498 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+28648 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+28739 did not reach us for reason: stars
+29513 did not reach us for reason: stars
+	AS_PATH:3320
+	FILTERING_AS: 3320
+30255 did not reach us for reason: stars
+	AS_PATH:56040,56040,56040,56040,9808,9808,9808,9808,9808
+	FILTERING_AS: 9808
+30525 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+30623 did not reach us for reason: host_unreach
+	AS_PATH:31076
+	FILTERING_AS: 31076
+30685 did not reach us for reason: host_unreach
+	AS_PATH:3320
+	FILTERING_AS: 3320
+30735 did not reach us for reason: stars
+	AS_PATH:1653,1653,1653,1653
+	FILTERING_AS: 1653
+30848 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+31150 did not reach us for reason: network_unreach
+	AS_PATH:39150,3216
+	FILTERING_AS: 3216
+31318 did not reach us for reason: stars
+31493 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+31519 did not reach us for reason: host_unreach
+	AS_PATH:6939,6939
+	FILTERING_AS: 6939
+32413 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+32421 did not reach us for reason: network_unreach
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+32663 did not reach us for reason: host_unreach
+	AS_PATH:15817
+	FILTERING_AS: 15817
+3274 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+33087 did not reach us for reason: host_unreach
+	AS_PATH:39650
+	FILTERING_AS: 39650
+33327 did not reach us for reason: stars
+	AS_PATH:X,X,X
+	FILTERING_AS: X
+33431 did not reach us for reason: network_unreach
+	AS_PATH:133802
+	FILTERING_AS: 133802
+33660 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+33740 did not reach us for reason: stars
+	AS_PATH:7018,X
+	FILTERING_AS: X
+33804 did not reach us for reason: network_unreach
+	AS_PATH:205597,205597
+	FILTERING_AS: 205597
+33972 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+33981 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+34330 did not reach us for reason: stars
+	AS_PATH:6939
+	FILTERING_AS: 6939
+34410005 did not reach us for reason: host_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+10012 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+10015 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+10022 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+10061 did not reach us for reason: host_unreach
+	AS_PATH:12676
+	FILTERING_AS: 12676
+10369 did not reach us for reason: host_unreach
+	AS_PATH:20355
+	FILTERING_AS: 20355
+10782 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+10886 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+11162 did not reach us for reason: stars
+11220 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+11226 did not reach us for reason: host_unreach
+	AS_PATH:6720
+	FILTERING_AS: 6720
+11504 did not reach us for reason: stars
+	AS_PATH:4739,7545,7545,7545,7545,7545,7545,6453,6453,6453,6453,6453,6453,6453,6453,6453,6453,6453,6453,3320,3320,3320,60169,8881,8881,8881
+	FILTERING_AS: 8881
+11563 did not reach us for reason: stars
+11690 did not reach us for reason: host_unreach
+	AS_PATH:1101
+	FILTERING_AS: 1101
+11711 did not reach us for reason: host_unreach
+	AS_PATH:198060
+	FILTERING_AS: 198060
+12074 did not reach us for reason: stars
+	AS_PATH:41090,41090
+	FILTERING_AS: 41090
+12082 did not reach us for reason: stars
+	AS_PATH:41090
+	FILTERING_AS: 41090
+12143 did not reach us for reason: network_unreach
+	AS_PATH:16591
+	FILTERING_AS: 16591
+12330 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,7018
+	FILTERING_AS: 7018
+12929 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+13679 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+13746 did not reach us for reason: stars
+	AS_PATH:6939
+	FILTERING_AS: 6939
+13833 did not reach us for reason: stars
+	AS_PATH:46562,46562,46562,X,6939,6939,6939,6939,6939
+	FILTERING_AS: 6939
+14004 did not reach us for reason: stars
+	AS_PATH:3333,3333,1200,6939,6939
+	FILTERING_AS: 6939
+14025 did not reach us for reason: host_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+14129 did not reach us for reason: stars
+14604 did not reach us for reason: network_unreach
+	AS_PATH:4922,4922,4922
+	FILTERING_AS: 4922
+15011 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+15093 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+15257 did not reach us for reason: stars
+15448 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+15761 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+15984 did not reach us for reason: host_unreach
+16641 did not reach us for reason: network_unreach
+	AS_PATH:7018,7018,X,X,X,X,X,X
+	FILTERING_AS: X
+16812 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+17554 did not reach us for reason: stars
+	AS_PATH:5408,5408
+	FILTERING_AS: 5408
+18068 did not reach us for reason: host_unreach
+	AS_PATH:44973
+	FILTERING_AS: 44973
+18284 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+18566 did not reach us for reason: network_unreach
+	AS_PATH:8251,8251
+	FILTERING_AS: 8251
+18820 did not reach us for reason: host_unreach
+	AS_PATH:44066
+	FILTERING_AS: 44066
+19117 did not reach us for reason: network_unreach
+	AS_PATH:136548
+	FILTERING_AS: 136548
+19354 did not reach us for reason: host_unreach
+	AS_PATH:62275
+	FILTERING_AS: 62275
+20277 did not reach us for reason: network_unreach
+	AS_PATH:57407,57407
+	FILTERING_AS: 57407
+20302 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+2036 did not reach us for reason: network_unreach
+	AS_PATH:209097,209097
+	FILTERING_AS: 209097
+20415 did not reach us for reason: stars
+	AS_PATH:60983,X,X,39180,174,174,174
+	FILTERING_AS: 174
+20560 did not reach us for reason: network_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+21326 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+21832 did not reach us for reason: stars
+	AS_PATH:24444,24444,24444,24444,9808,9808,9808,9808,9808
+	FILTERING_AS: 9808
+22384 did not reach us for reason: stars
+22542 did not reach us for reason: host_unreach
+	AS_PATH:28859
+	FILTERING_AS: 28859
+22759 did not reach us for reason: host_unreach
+	AS_PATH:5607,5607
+	FILTERING_AS: 5607
+22863 did not reach us for reason: host_unreach
+	AS_PATH:198936
+	FILTERING_AS: 198936
+22894 did not reach us for reason: stars
+	AS_PATH:2119
+	FILTERING_AS: 2119
+22899 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+22958 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+23185 did not reach us for reason: stars
+	AS_PATH:12414,12414,12414,12414
+	FILTERING_AS: 12414
+23328 did not reach us for reason: stars
+24004 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+24037 did not reach us for reason: host_unreach
+	AS_PATH:553
+	FILTERING_AS: 553
+24147 did not reach us for reason: stars
+24522 did not reach us for reason: stars
+	AS_PATH:199743,199743,24785,24785,24785
+	FILTERING_AS: 24785
+24744 did not reach us for reason: host_unreach
+	AS_PATH:395592
+	FILTERING_AS: 395592
+24889 did not reach us for reason: host_unreach
+	AS_PATH:5607,5607
+	FILTERING_AS: 5607
+24893 did not reach us for reason: stars
+	AS_PATH:1653,1653,1653
+	FILTERING_AS: 1653
+25718 did not reach us for reason: host_unreach
+	AS_PATH:6799
+	FILTERING_AS: 6799
+25724 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+2580 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+26102 did not reach us for reason: host_unreach
+	AS_PATH:8468
+	FILTERING_AS: 8468
+26514 did not reach us for reason: host_unreach
+	AS_PATH:3265
+	FILTERING_AS: 3265
+26738 did not reach us for reason: stars
+	AS_PATH:1741,1741,1741,1741,1741,1741,1741,1741,1741,1741,1741,1741
+	FILTERING_AS: 1741
+26849 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+27460 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+27884 did not reach us for reason: stars
+28376 did not reach us for reason: stars
+	AS_PATH:9595
+	FILTERING_AS: 9595
+28696 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+28869 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+28966 did not reach us for reason: host_unreach
+	AS_PATH:6939,6939
+	FILTERING_AS: 6939
+29333 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+2955 did not reach us for reason: host_unreach
+29740 did not reach us for reason: host_unreach
+	AS_PATH:24940
+	FILTERING_AS: 24940
+29870 did not reach us for reason: network_unreach
+	AS_PATH:1133,1133,1103,1103
+	FILTERING_AS: 1103
+30032 did not reach us for reason: stars
+30680 did not reach us for reason: stars
+30735 did not reach us for reason: stars
+	AS_PATH:1653,1653,1653,1653
+	FILTERING_AS: 1653
+30832 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+31103 did not reach us for reason: network_unreach
+	AS_PATH:15474,15474
+	FILTERING_AS: 15474
+31150 did not reach us for reason: network_unreach
+	AS_PATH:39150,3216
+	FILTERING_AS: 3216
+31519 did not reach us for reason: host_unreach
+	AS_PATH:6939,6939
+	FILTERING_AS: 6939
+31924 did not reach us for reason: stars
+32409 did not reach us for reason: stars
+	AS_PATH:X,X,X
+	FILTERING_AS: X
+32718 did not reach us for reason: host_unreach
+	AS_PATH:31334
+	FILTERING_AS: 31334
+33327 did not reach us for reason: stars
+	AS_PATH:X,X,X
+	FILTERING_AS: X
+33740 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,X
+	FILTERING_AS: X
+34682 did not reach us for reason: host_unreach
+	AS_PATH:7922
+	FILTERING_AS: 7922
+34707 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+35618 did not reach us for reason: network_unreach
+	AS_PATH:44843
+	FILTERING_AS: 44843
+3638 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+4117 d10005 did not reach us for reason: host_unreach
+	AS_PATH:3265
+	FILTERING_AS: 3265
+10022 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+10031 did not reach us for reason: stars
+10584 did not reach us for reason: stars
+10940 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+11207 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+11219 did not reach us for reason: stars
+	AS_PATH:48112
+	FILTERING_AS: 48112
+11561 did not reach us for reason: stars
+11698 did not reach us for reason: host_unreach
+11711 did not reach us for reason: host_unreach
+	AS_PATH:198060
+	FILTERING_AS: 198060
+12143 did not reach us for reason: network_unreach
+	AS_PATH:16591
+	FILTERING_AS: 16591
+12209 did not reach us for reason: stars
+12330 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,7018
+	FILTERING_AS: 7018
+12723 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+12878 did not reach us for reason: stars
+12929 did not reach us for reason: network_unreach
+13010 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+13666 did not reach us for reason: network_unreach
+	AS_PATH:7922
+	FILTERING_AS: 7922
+14051 did not reach us for reason: host_unreach
+	AS_PATH:5607,5607
+	FILTERING_AS: 5607
+14468 did not reach us for reason: stars
+14661 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+15011 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+15257 did not reach us for reason: stars
+15448 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+15761 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+16612 did not reach us for reason: stars
+	AS_PATH:136548,136548,136548
+	FILTERING_AS: 136548
+16834 did not reach us for reason: stars
+	AS_PATH:5410
+	FILTERING_AS: 5410
+16882 did not reach us for reason: stars
+	AS_PATH:29396,29396
+	FILTERING_AS: 29396
+17554 did not reach us for reason: stars
+	AS_PATH:5408,5408
+	FILTERING_AS: 5408
+17596 did not reach us for reason: network_unreach
+	AS_PATH:237,237,237,237
+	FILTERING_AS: 237
+17715 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+17797 did not reach us for reason: network_unreach
+	AS_PATH:X,X,X,X,X
+	FILTERING_AS: X
+18068 did not reach us for reason: host_unreach
+	AS_PATH:44973
+	FILTERING_AS: 44973
+18166 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+18227 did not reach us for reason: stars
+	AS_PATH:15965
+	FILTERING_AS: 15965
+18284 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+19093 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+20302 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+20435 did not reach us for reason: stars
+	AS_PATH:7922
+	FILTERING_AS: 7922
+20560 did not reach us for reason: network_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+21246 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+21382 did not reach us for reason: host_unreach
+	AS_PATH:5607,5607
+	FILTERING_AS: 5607
+22079 did not reach us for reason: stars
+	AS_PATH:15965
+	FILTERING_AS: 15965
+22441 did not reach us for reason: network_unreach
+	AS_PATH:8664
+	FILTERING_AS: 8664
+22863 did not reach us for reason: host_unreach
+	AS_PATH:198936
+	FILTERING_AS: 198936
+22870 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+22958 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+23185 did not reach us for reason: stars
+	AS_PATH:12414,12414,12414,12414
+	FILTERING_AS: 12414
+23328 did not reach us for reason: stars
+23463 did not reach us for reason: host_unreach
+	AS_PATH:28110
+	FILTERING_AS: 28110
+23738 did not reach us for reason: stars
+24023 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+24345 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+24748 did not reach us for reason: host_unreach
+	AS_PATH:33843,33843
+	FILTERING_AS: 33843
+24874 did not reach us for reason: stars
+	AS_PATH:2119
+	FILTERING_AS: 2119
+24889 did not reach us for reason: host_unreach
+	AS_PATH:5607,5607
+	FILTERING_AS: 5607
+24893 did not reach us for reason: stars
+	AS_PATH:1653,1653,1653
+	FILTERING_AS: 1653
+24982 did not reach us for reason: host_unreach
+	AS_PATH:33984
+	FILTERING_AS: 33984
+25019 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+25064 did not reach us for reason: host_unreach
+	AS_PATH:133318
+	FILTERING_AS: 133318
+25724 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+25752 did not reach us for reason: stars
+25915 did not reach us for reason: stars
+	AS_PATH:201723,201723,201723
+	FILTERING_AS: 201723
+26102 did not reach us for reason: host_unreach
+	AS_PATH:8468
+	FILTERING_AS: 8468
+26911 did not reach us for reason: network_unreach
+	AS_PATH:12897
+	FILTERING_AS: 12897
+27460 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+27782 did not reach us for reason: stars
+27884 did not reach us for reason: stars
+28119 did not reach us for reason: stars
+28370 did not reach us for reason: network_unreach
+	AS_PATH:2500,2500,2500
+	FILTERING_AS: 2500
+28376 did not reach us for reason: stars
+	AS_PATH:9595
+	FILTERING_AS: 9595
+28551 did not reach us for reason: network_unreach
+	AS_PATH:4764
+	FILTERING_AS: 4764
+28631 did not reach us for reason: stars
+28696 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+28739 did not reach us for reason: stars
+28740 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+28745 did not reach us for reason: stars
+	AS_PATH:40980,40980,47147
+	FILTERING_AS: 47147
+28966 did not reach us for reason: host_unreach
+	AS_PATH:6939,6939
+	FILTERING_AS: 6939
+29870 did not reach us for reason: network_unreach
+	AS_PATH:1133,1133,1103,1103,1103
+	FILTERING_AS: 1103
+30276 did not reach us for reason: stars
+	AS_PATH:1103
+	FILTERING_AS: 1103
+30683 did not reach us for reason: stars
+	AS_PATH:4844,4844,7473,7473,7473,X,6939,6939,6939,6939,6939
+	FILTERING_AS: 6939
+30685 did not reach us for reason: host_unreach
+	AS_PATH:3320
+	FILTERING_AS: 3320
+30721 did not reach us for reason: stars
+	AS_PATH:24904
+	FILTERING_AS: 24904
+31355 did not reach us for reason: stars
+	AS_PATH:262913,262913
+	FILTERING_AS: 262913
+31625 did not reach us for reason: stars
+	AS_PATH:201011
+	FILTERING_AS: 201011
+31945 did not reach us for reason: stars
+32090 did not reach us for reason: stars
+	AS_PATH:210312,210312,8280
+	FILTERING_AS: 8280
+32139 did not reach us for reason: stars
+32166 did not reach us for reason: network_unreach
+	AS_PATH:12779,12779,12779,12779
+	FILTERING_AS: 12779
+32749 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+32861 did not reach us for reason: stars
+	AS_PATH:23951
+	FILTERING_AS: 23951
+33327 did not reach us for reason: stars
+	AS_PATH:X,X,X
+	FILTERING_AS: X
+33431 did not reach us for reason: network_unreach
+	AS_PATH:133802
+	FILTERING_AS: 133802
+33804 did not reach us for reason: network_unreach
+	AS_PATH:205597,205597
+	FILTERING_AS: 205597
+33981 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+34707 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+35289 did not reach us for reason: network_unreach
+	AS_PATH:393837
+	FILTERING_AS: 393837
+35653 did not reach us for reason: stars
+4501 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+4680 did not reach us for reason: host_unreach
+	AS_PATH:25596
+	FILTERING_AS: 25596
+4850 did not reach us for reason: host_unreach
+	AS_PATH:6848
+	FILTERING_AS: 6848
+50003 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265,3265
+	FILTERING_AS: 3265
+50016 did not reach us for reason: stars
+	AS_PATH:2852,2852,2852,2852
+	FILTERING_AS: 2852
+50456 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+50535 did not reach us for reason: stars
+	AS_PATH:2852,2852,2852,2852
+	FILTERING_AS: 2852
+50847 did not reach us for reason: host_unreach
+	AS_PATH:209702
+	FILTERING_AS: 209702
+51031 did not reach us for reason: stars
+51233 did not reach us for reason: network_unreach
+	AS_PATH:7922
+	FILTERING_AS: 7922
+51262 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+51462 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+51525 did not reach us for reason: network_unreach
+	AS_PATH:3462,3462,3462
+	FILTERING_AS: 3462
+52155 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,X,X
+	FILTERING_AS: X
+6028 did not reach us for reason: host_unreach
+6276 did not reach us for reason: stars
+6342 did not reach us for reason: stars
+	AS_PATH:203993,12414,12414,12414,12414
+	FILTERING_AS: 12414
+6386 did not reach us for reason: network_unreach
+	AS_PATH:4764
+	FILTERING_AS: 4764
+6407 did not reach us for reason: host_unreach
+6413 did not reach us for reason: network_unreach
+	AS_PATH:34549
+	FILTERING_AS: 34549
+6421 did not reach us for reason: host_unreach
+	AS_PATH:20150
+	FILTERING_AS: 20150
+6591 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+6628 did not reach us for reason: stars
+AS 48112  1 hits!
+AS 3462  1 hits!
+AS 44973  1 hits!
+AS 198060  1 hits!
+AS 47147  1 hits!
+AS 8664  1 hits!
+AS 33843  1 hits!
+AS 20150  1 hits!
+AS 2500  1 hits!
+AS 16591  1 hits!
+AS 34549  1 hits!
+AS 1653  1 hits!
+AS 3320  1 hits!
+AS 262913  1 hits!
+AS 12779  1 hits!
+AS 8468  1 hits!
+AS 198936  1 hits!
+AS 29396  1 hits!
+AS 133318  1 hits!
+AS 8280  1 hits!
+AS 20712  1 hits!
+AS 23951  1 hits!
+AS 7018  1 hits!
+AS 201011  1 hits!
+AS 393837  1 hits!
+AS 209702  1 hits!
+AS 28110  1 hits!
+AS 136548  1 hits!
+AS 9595  1 hits!
+AS 12897  1 hits!
+AS 237  1 hits!
+AS 25596  1 hits!
+AS 201723  1 hits!
+AS 2119  1 hits!
+AS 6848  1 hits!
+AS 24904  1 hits!
+AS 133802  1 hits!
+AS 33984  1 hits!
+AS 5410  1 hits!
+AS 205597  1 hits!
+AS 2852  2 hits!
+AS 12414  2 hits!
+AS 4764  2 hits!
+AS 15965  2 hits!
+AS 1103  2 hits!
+AS 5607  3 hits!
+AS 5408  3 hits!
+AS 7922  3 hits!
+AS 6939  4 hits!
+AS 3265  16 hits!
+AS X  17 hits!
+8 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+35673 did not reach us for reason: network_unreach
+	AS_PATH:7018
+	FILTERING_AS: 7018
+4117 did not reach us for reason: stars
+50003 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265,3265
+	FILTERING_AS: 3265
+50016 did not reach us for reason: stars
+	AS_PATH:2852,2852,2852,2852
+	FILTERING_AS: 2852
+50142 did not reach us for reason: stars
+	AS_PATH:7922
+	FILTERING_AS: 7922
+50307 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,7018
+	FILTERING_AS: 7018
+50535 did not reach us for reason: stars
+	AS_PATH:2852,2852,2852,2852
+	FILTERING_AS: 2852
+51025 did not reach us for reason: stars
+	AS_PATH:1103
+	FILTERING_AS: 1103
+51031 did not reach us for reason: stars
+51205 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,7018
+	FILTERING_AS: 7018
+51310 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+51525 did not reach us for reason: network_unreach
+	AS_PATH:3462,3462,3462,3462
+	FILTERING_AS: 3462
+52019 did not reach us for reason: network_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+52155 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,X
+	FILTERING_AS: X
+6102 did not reach us for reason: host_unreach
+6175 did not reach us for reason: network_unreach
+	AS_PATH:1103,1103,1103,1103
+	FILTERING_AS: 1103
+6195 did not reach us for reason: stars
+	AS_PATH:25376
+	FILTERING_AS: 25376
+6231 did not reach us for reason: stars
+	AS_PATH:X,X
+	FILTERING_AS: X
+6348 did not reach us for reason: stars
+	AS_PATH:3333,6939,6939,553,553
+	FILTERING_AS: 553
+6391 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+6421 did not reach us for reason: host_unreach
+	AS_PATH:20150
+	FILTERING_AS: 20150
+6422 did not reach us for reason: host_unreach
+	AS_PATH:20150
+	FILTERING_AS: 20150
+6433 did not reach us for reason: network_unreach
+	AS_PATH:206479,206479
+	FILTERING_AS: 206479
+6519 did not reach us for reason: stars
+	AS_PATH:41495
+	FILTERING_AS: 41495
+6533 did not reach us for reason: network_unreach
+	AS_PATH:2613
+	FILTERING_AS: 2613
+AS 31076  1 hits!
+AS 25478  1 hits!
+AS 9808  1 hits!
+AS 8468  1 hits!
+AS 206479  1 hits!
+AS 2119  1 hits!
+AS 16591  1 hits!
+AS 224  1 hits!
+AS 46562  1 hits!
+AS 3216  1 hits!
+AS 25376  1 hits!
+AS 45494  1 hits!
+AS 4796  1 hits!
+AS 680  1 hits!
+AS 4922  1 hits!
+AS 41495  1 hits!
+AS 3462  1 hits!
+AS 201723  1 hits!
+AS 198060  1 hits!
+AS 237  1 hits!
+AS 15817  1 hits!
+AS 4773  1 hits!
+AS 395592  1 hits!
+AS 208059  1 hits!
+AS 200490  1 hits!
+AS 133802  1 hits!
+AS 136548  1 hits!
+AS 20712  1 hits!
+AS 1653  1 hits!
+AS 12897  1 hits!
+AS 205597  1 hits!
+AS 39650  1 hits!
+AS 31479  1 hits!
+AS 199399  1 hits!
+AS 262145  1 hits!
+AS 45131  1 hits!
+AS 2613  1 hits!
+AS 37100  1 hits!
+AS 15965  1 hits!
+AS 38229  1 hits!
+AS 28878  1 hits!
+AS 7922  2 hits!
+AS 2852  2 hits!
+AS 20150  2 hits!
+AS 3320  2 hits!
+AS 5607  2 hits!
+AS 553  2 hits!
+AS 5408  3 hits!
+AS 1103  3 hits!
+AS 7018  6 hits!
+AS 6939  10 hits!
+AS X  17 hits!
+AS 3265  18 hits!
+id not reach us for reason: stars
+4719 did not reach us for reason: stars
+50442 did not reach us for reason: network_unreach
+	AS_PATH:7018,7018,X,X
+	FILTERING_AS: X
+50456 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+50528 did not reach us for reason: network_unreach
+	AS_PATH:210118
+	FILTERING_AS: 210118
+51116 did not reach us for reason: network_unreach
+	AS_PATH:852,852
+	FILTERING_AS: 852
+51193 did not reach us for reason: stars
+51201 did not reach us for reason: stars
+	AS_PATH:3292
+	FILTERING_AS: 3292
+51354 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+51462 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+51525 did not reach us for reason: stars
+	AS_PATH:3462,3462,3462
+	FILTERING_AS: 3462
+6079 did not reach us for reason: network_unreach
+	AS_PATH:3265
+	FILTERING_AS: 3265
+6138 did not reach us for reason: stars
+6217 did not reach us for reason: stars
+	AS_PATH:12812,12812,9051,9051,9051,X,X,1299,1299
+	FILTERING_AS: 1299
+6276 did not reach us for reason: stars
+6368 did not reach us for reason: network_unreach
+	AS_PATH:39138
+	FILTERING_AS: 39138
+6386 did not reach us for reason: network_unreach
+	AS_PATH:4764
+	FILTERING_AS: 4764
+6413 did not reach us for reason: network_unreach
+	AS_PATH:34549
+	FILTERING_AS: 34549
+6433 did not reach us for reason: network_unreach
+	AS_PATH:206479,206479
+	FILTERING_AS: 206479
+6474 did not reach us for reason: stars
+6522 did not reach us for reason: network_unreach
+	AS_PATH:1403
+	FILTERING_AS: 1403
+6533 did not reach us for reason: network_unreach
+	AS_PATH:2613
+	FILTERING_AS: 2613
+6570 did not reach us for reason: host_unreach
+	AS_PATH:7018
+	FILTERING_AS: 7018
+AS 1741  1 hits!
+AS 1403  1 hits!
+AS 44973  1 hits!
+AS 57407  1 hits!
+AS 1103  1 hits!
+AS 8251  1 hits!
+AS 62275  1 hits!
+AS 4922  1 hits!
+AS 206479  1 hits!
+AS 852  1 hits!
+AS 24785  1 hits!
+AS 9595  1 hits!
+AS 8881  1 hits!
+AS 3216  1 hits!
+AS 12676  1 hits!
+AS 209097  1 hits!
+AS 24940  1 hits!
+AS 16591  1 hits!
+AS 174  1 hits!
+AS 31334  1 hits!
+AS 198936  1 hits!
+AS 39138  1 hits!
+AS 1299  1 hits!
+AS 15474  1 hits!
+AS 2119  1 hits!
+AS 3292  1 hits!
+AS 5408  1 hits!
+AS 210118  1 hits!
+AS 6799  1 hits!
+AS 2613  1 hits!
+AS 3462  1 hits!
+AS 7922  1 hits!
+AS 136548  1 hits!
+AS 9808  1 hits!
+AS 44843  1 hits!
+AS 198060  1 hits!
+AS 553  1 hits!
+AS 6720  1 hits!
+AS 395592  1 hits!
+AS 34549  1 hits!
+AS 44066  1 hits!
+AS 12414  1 hits!
+AS 20355  1 hits!
+AS 1101  1 hits!
+AS 28859  1 hits!
+AS 4764  1 hits!
+AS 8468  1 hits!
+AS 7018  2 hits!
+AS 1653  2 hits!
+AS 5607  2 hits!
+AS 41090  2 hits!
+AS 20712  3 hits!
+AS 6939  8 hits!
+AS X  13 hits!
+AS 3265  23 hits!
+10001 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+10022 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+10061 did not reach us for reason: host_unreach
+	AS_PATH:12676
+	FILTERING_AS: 12676
+10556 did not reach us for reason: host_unreach
+	AS_PATH:20001
+	FILTERING_AS: 20001
+11162 did not reach us for reason: stars
+11207 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+11219 did not reach us for reason: stars
+	AS_PATH:48112
+	FILTERING_AS: 48112
+11536 did not reach us for reason: network_unreach
+	AS_PATH:7018,7018,X,X,X,X,X,X
+	FILTERING_AS: X
+11551 did not reach us for reason: host_unreach
+	AS_PATH:786
+	FILTERING_AS: 786
+11556 did not reach us for reason: stars
+	AS_PATH:2119
+	FILTERING_AS: 2119
+11711 did not reach us for reason: host_unreach
+	AS_PATH:198060
+	FILTERING_AS: 198060
+11877 did not reach us for reason: host_unreach
+	AS_PATH:57329,57329
+	FILTERING_AS: 57329
+12175 did not reach us for reason: stars
+	AS_PATH:1103
+	FILTERING_AS: 1103
+12330 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,7018
+	FILTERING_AS: 7018
+12363 did not reach us for reason: host_unreach
+	AS_PATH:4739
+	FILTERING_AS: 4739
+12642 did not reach us for reason: host_unreach
+	AS_PATH:25478
+	FILTERING_AS: 25478
+12878 did not reach us for reason: stars
+12929 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+12988 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+13010 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+13082 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+13476 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+13496 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+13649 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+13834 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,X
+	FILTERING_AS: X
+14042 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+14616 did not reach us for reason: host_unreach
+	AS_PATH:3265
+	FILTERING_AS: 3265
+14895 did not reach us for reason: stars
+15448 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+15535 did not reach us for reason: stars
+	AS_PATH:6736,6736,6736,6736,6736
+	FILTERING_AS: 6736
+15762 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+15795 did not reach us for reason: stars
+16812 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+16882 did not reach us for reason: stars
+	AS_PATH:29396,29396
+	FILTERING_AS: 29396
+16891 did not reach us for reason: stars
+	AS_PATH:1103,1103
+	FILTERING_AS: 1103
+17008 did not reach us for reason: stars
+	AS_PATH:28573
+	FILTERING_AS: 28573
+17715 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+17998 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+18166 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+18227 did not reach us for reason: stars
+	AS_PATH:15965
+	FILTERING_AS: 15965
+18720 did not reach us for reason: stars
+	AS_PATH:61349,61349,61349,57866,57866,1299,1299,1299,1299,1299
+	FILTERING_AS: 1299
+18819 did not reach us for reason: stars
+	AS_PATH:28878,28878,28878,28878
+	FILTERING_AS: 28878
+19196 did not reach us for reason: stars
+	AS_PATH:1403,1403
+	FILTERING_AS: 1403
+19329 did not reach us for reason: stars
+	AS_PATH:24586,24586,174,174,174
+	FILTERING_AS: 174
+19459 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+19555 did not reach us for reason: network_unreach
+	AS_PATH:7018,X
+	FILTERING_AS: X
+19710 did not reach us for reason: stars
+	AS_PATH:45131,45131,45131
+	FILTERING_AS: 45131
+20277 did not reach us for reason: network_unreach
+	AS_PATH:57407,57407
+	FILTERING_AS: 57407
+20302 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+20326 did not reach us for reason: stars
+21552 did not reach us for reason: network_unreach
+	AS_PATH:224,224,224
+	FILTERING_AS: 224
+21577 did not reach us for reason: network_unreach
+	AS_PATH:224,224,224,224,224
+	FILTERING_AS: 224
+21907 did not reach us for reason: host_unreach
+	AS_PATH:55850
+	FILTERING_AS: 55850
+22256 did not reach us for reason: stars
+	AS_PATH:48173,60169,8881,8881
+	FILTERING_AS: 8881
+22441 did not reach us for reason: network_unreach
+	AS_PATH:8664
+	FILTERING_AS: 8664
+22759 did not reach us for reason: host_unreach
+	AS_PATH:5607,5607
+	FILTERING_AS: 5607
+22958 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+23328 did not reach us for reason: stars
+23360 did not reach us for reason: stars
+	AS_PATH:6939
+	FILTERING_AS: 6939
+23907 did not reach us for reason: network_unreach
+	AS_PATH:208059
+	FILTERING_AS: 208059
+24004 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+24147 did not reach us for reason: stars
+24744 did not reach us for reason: host_unreach
+	AS_PATH:395592
+	FILTERING_AS: 395592
+26015 did not reach us for reason: network_unreach
+	AS_PATH:1136
+	FILTERING_AS: 1136
+26658 did not reach us for reason: network_unreach
+	AS_PATH:1103
+	FILTERING_AS: 1103
+27889 did not reach us for reason: stars
+	AS_PATH:199399
+	FILTERING_AS: 199399
+28002 did not reach us for reason: stars
+	AS_PATH:197580
+	FILTERING_AS: 197580
+28119 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+28270 did not reach us for reason: host_unreach
+	AS_PATH:8767
+	FILTERING_AS: 8767
+28511 did not reach us for reason: stars
+28631 did not reach us for reason: stars
+28660 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+30145 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+30228 did not reach us for reason: host_unreach
+	AS_PATH:205415
+	FILTERING_AS: 205415
+30459 did not reach us for reason: network_unreach
+	AS_PATH:210312
+	FILTERING_AS: 210312
+30630 did not reach us for reason: network_unreach
+	AS_PATH:133802
+	FILTERING_AS: 133802
+30680 did not reach us for reason: stars
+30683 did not reach us for reason: stars
+	AS_PATH:4844,4844,7473,7473,7473,X,6939,6939,6939,6939,6939
+	FILTERING_AS: 6939
+30848 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+30897 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+31240 did not reach us for reason: stars
+	AS_PATH:41495
+	FILTERING_AS: 41495
+31475 did not reach us for reason: stars
+	AS_PATH:1140,1140,1140,X,3320,3320,8881,8881,8881,553
+	FILTERING_AS: 553
+31493 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+31614 did not reach us for reason: stars
+31710 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+31902 did not reach us for reason: network_unreach
+32031 did not reach us for reason: network_unreach
+	AS_PATH:202119
+	FILTERING_AS: 202119
+32378 did not reach us for reason: stars
+32430 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+32655 did not reach us for reason: stars
+32663 did not reach us for reason: host_unreach
+	AS_PATH:15817
+	FILTERING_AS: 15817
+32749 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+3286 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+33087 did not reach us for reason: host_unreach
+	AS_PATH:39650
+	FILTERING_AS: 39650
+33289 did not reach us for reason: stars
+	AS_PATH:36874
+	FILTERING_AS: 36874
+33297 did not reach us for reason: network_unreach
+	AS_PATH:7018,7018,X,X,X
+	FILTERING_AS: X
+33410 did not reach us for reason: network_unreach
+	AS_PATH:1835,1835,1835
+	FILTERING_AS: 1835
+33615 did not reach us for reason: stars
+	AS_PATH:44194,44194
+	FILTERING_AS: 44194
+33972 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+35020 did not reach us for reason: network_unreach
+	AS_PATH:7850
+	FILTERING_AS: 7850
+35580 did not reach us for reason: stars
+35653 did not reach us for reason: stars
+4117 did not reach us for reason: stars
+4600 did not reach us for reason: network_unreach
+	10012 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+10963 did not reach us for reason: stars
+	AS_PATH:X,6503,6503,6503,6503,6503
+	FILTERING_AS: 6503
+11171 did not reach us for reason: stars
+	AS_PATH:7018
+	FILTERING_AS: 7018
+11285 did not reach us for reason: stars
+	AS_PATH:60955,60955,60955,201011
+	FILTERING_AS: 201011
+11422 did not reach us for reason: stars
+11880 did not reach us for reason: stars
+	AS_PATH:44084,X,X,3257,3257,3356,3356,3356,553
+	FILTERING_AS: 553
+12380 did not reach us for reason: network_unreach
+	AS_PATH:X,7018,7018
+	FILTERING_AS: 7018
+12834 did not reach us for reason: stars
+	AS_PATH:X,2119,2119
+	FILTERING_AS: 2119
+13283 did not reach us for reason: network_unreach
+	AS_PATH:X,60485,7018,7018
+	FILTERING_AS: 7018
+13679 did not reach us for reason: network_unreach
+	AS_PATH:1103,1103,X
+	FILTERING_AS: X
+14355 did not reach us for reason: stars
+	AS_PATH:X,174,174,174,174,174,174,174,174,553
+	FILTERING_AS: 553
+14695 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+16772 did not reach us for reason: host_unreach
+	AS_PATH:61006
+	FILTERING_AS: 61006
+16882 did not reach us for reason: stars
+	AS_PATH:X,29396
+	FILTERING_AS: 29396
+16984 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+17554 did not reach us for reason: stars
+	AS_PATH:5408,5408
+	FILTERING_AS: 5408
+18585 did not reach us for reason: stars
+	AS_PATH:40490,5580,3257,3356,3356,3356
+	FILTERING_AS: 3356
+20105 did not reach us for reason: stars
+20302 did not reach us for reason: network_unreach
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+22894 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+23223 did not reach us for reason: stars
+	AS_PATH:2119,X,X,2119,X
+	FILTERING_AS: X
+23813 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+24345 did not reach us for reason: network_unreach
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+26034 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+26849 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+27460 did not reach us for reason: network_unreach
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+28159 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+28556 did not reach us for reason: stars
+	AS_PATH:X,X,X,X,204668
+	FILTERING_AS: 204668
+2866 did not reach us for reason: stars
+	AS_PATH:X,X,33885
+	FILTERING_AS: 33885
+30520 did not reach us for reason: network_unreach
+	AS_PATH:50596
+	FILTERING_AS: 50596
+30621 did not reach us for reason: stars
+32038 did not reach us for reason: stars
+	AS_PATH:X,2119
+	FILTERING_AS: 2119
+33519 did not reach us for reason: stars
+	AS_PATH:X,X,2119,2119
+	FILTERING_AS: 2119
+33561 did not reach us for reason: stars
+	AS_PATH:X,2119,2119
+	FILTERING_AS: 2119
+34341 did not reach us for reason: stars
+	AS_PATH:2119,2119
+	FILTERING_AS: 2119
+35553 did not reach us for reason: stars
+	AS_PATH:X,X,7018,7018,7018
+	FILTERING_AS: 7018
+50209 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+50684 did not reach us for reason: network_unreach
+	AS_PATH:198611
+	FILTERING_AS: 198611
+50947 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+52072 did not reach us for reason: stars
+	AS_PATH:X,15426,39647
+	FILTERING_AS: 39647
+52156 did not reach us for reason: stars
+	AS_PATH:X,1403,X
+	FILTERING_AS: X
+6105 did not reach us for reason: network_unreach
+	AS_PATH:48918,48918
+	FILTERING_AS: 48918
+AS 201011  1 hits!
+AS 6503  1 hits!
+AS 48918  1 hits!
+AS 29396  1 hits!
+AS 50596  1 hits!
+AS 198611  1 hits!
+AS 33885  1 hits!
+AS 5408  1 hits!
+AS 3356  1 hits!
+AS 204668  1 hits!
+AS 39647  1 hits!
+AS 61006  1 hits!
+AS 553  2 hits!
+AS 35612  2 hits!
+AS X  4 hits!
+AS 2119  5 hits!
+AS 7018  5 hits!
+AS 3265  9 hits!
+AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+4823 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+4930 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+50084 did not reach us for reason: host_unreach
+	AS_PATH:7018,7018
+	FILTERING_AS: 7018
+50442 did not reach us for reason: network_unreach
+	AS_PATH:7018,7018,X,X
+	FILTERING_AS: X
+50501 did not reach us for reason: stars
+50538 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+50762 did not reach us for reason: host_unreach
+	AS_PATH:39651
+	FILTERING_AS: 39651
+51031 did not reach us for reason: stars
+51116 did not reach us for reason: network_unreach
+	AS_PATH:852,852
+	FILTERING_AS: 852
+51205 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,7018
+	FILTERING_AS: 7018
+51270 did not reach us for reason: stars
+	AS_PATH:2119,2119
+	FILTERING_AS: 2119
+6028 did not reach us for reason: host_unreach
+	AS_PATH:48294
+	FILTERING_AS: 48294
+6082 did not reach us for reason: stars
+	AS_PATH:198260,198260,3257,3257,1299,1299,1299,1299
+	FILTERING_AS: 1299
+6102 did not reach us for reason: host_unreach
+6138 did not reach us for reason: stars
+6195 did not reach us for reason: stars
+	AS_PATH:25376
+	FILTERING_AS: 25376
+6276 did not reach us for reason: stars
+6357 did not reach us for reason: network_unreach
+	AS_PATH:39138,39138
+	FILTERING_AS: 39138
+6371 did not reach us for reason: stars
+	AS_PATH:48961
+	FILTERING_AS: 48961
+6404 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+6417 did not reach us for reason: stars
+	AS_PATH:48112
+	FILTERING_AS: 48112
+6433 did not reach us for reason: network_unreach
+	AS_PATH:206479,206479
+	FILTERING_AS: 206479
+6519 did not reach us for reason: stars
+	AS_PATH:41495
+	FILTERING_AS: 41495
+6591 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+AS 5607  1 hits!
+AS 1136  1 hits!
+AS 197580  1 hits!
+AS 25376  1 hits!
+AS 39650  1 hits!
+AS 202119  1 hits!
+AS 48961  1 hits!
+AS 4739  1 hits!
+AS 206479  1 hits!
+AS 205415  1 hits!
+AS 852  1 hits!
+AS 208059  1 hits!
+AS 29396  1 hits!
+AS 20001  1 hits!
+AS 15817  1 hits!
+AS 6736  1 hits!
+AS 39651  1 hits!
+AS 8664  1 hits!
+AS 39138  1 hits!
+AS 395592  1 hits!
+AS 20712  1 hits!
+AS 28573  1 hits!
+AS 8881  1 hits!
+AS 57329  1 hits!
+AS 174  1 hits!
+AS 57407  1 hits!
+AS 8767  1 hits!
+AS 786  1 hits!
+AS 553  1 hits!
+AS 133802  1 hits!
+AS 36874  1 hits!
+AS 1403  1 hits!
+AS 12676  1 hits!
+AS 44194  1 hits!
+AS 1835  1 hits!
+AS 48294  1 hits!
+AS 7850  1 hits!
+AS 210312  1 hits!
+AS 55850  1 hits!
+AS 28878  1 hits!
+AS 25478  1 hits!
+AS 45131  1 hits!
+AS 198060  1 hits!
+AS 15965  1 hits!
+AS 199399  1 hits!
+AS 1299  2 hits!
+AS 2119  2 hits!
+AS 48112  2 hits!
+AS 224  2 hits!
+AS 41495  2 hits!
+AS 1103  3 hits!
+AS 7018  3 hits!
+AS 5408  4 hits!
+AS 6939  4 hits!
+AS X  17 hits!
+AS 3265  20 hits!
+10001 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+10782 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+12108 did not reach us for reason: stars
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+13010 did not reach us for reason: stars
+	AS_PATH:5408,X
+	FILTERING_AS: X
+13358 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+13496 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+13651 did not reach us for reason: stars
+	AS_PATH:X,7018,7018,7018
+	FILTERING_AS: 7018
+14695 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+15138 did not reach us for reason: stars
+17918 did not reach us for reason: stars
+	AS_PATH:X,33885,33885
+	FILTERING_AS: 33885
+17998 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+18085 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+18805 did not reach us for reason: stars
+	AS_PATH:X,X,X,X,47438,47438
+	FILTERING_AS: 47438
+19304 did not reach us for reason: stars
+	AS_PATH:62225,2116,3356,3356,3356
+	FILTERING_AS: 3356
+20105 did not reach us for reason: stars
+20324 did not reach us for reason: network_unreach
+	AS_PATH:X,3265,3265
+	FILTERING_AS: 3265
+24004 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+24932 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+26034 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+26514 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+26849 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+30832 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+3264 did not reach us for reason: stars
+	AS_PATH:X,X,3265
+	FILTERING_AS: 3265
+33129 did not reach us for reason: stars
+33404 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+33972 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+33982 did not reach us for reason: stars
+	AS_PATH:X,X,X,39886,22363,6461,6461,6461,X,553,553,553
+	FILTERING_AS: 553
+34144 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+4501 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+4930 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+50287 did not reach us for reason: stars
+	AS_PATH:2852,2852,2852,2852
+	FILTERING_AS: 2852
+50919 did not reach us for reason: network_unreach
+	AS_PATH:X,237,X,27274,237,237
+	FILTERING_AS: 237
+51006 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+51217 did not reach us for reason: network_unreach
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+51263 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+51339 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+51354 did not reach us for reason: stars
+	AS_PATH:X,7018,7018,7018
+	FILTERING_AS: 7018
+52113 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+52182 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+6175 did not reach us for reason: stars
+	AS_PATH:1103,1103,1103
+	FILTERING_AS: 1103
+6417 did not reach us for reason: stars
+	AS_PATH:48112
+	FILTERING_AS: 48112
+AS 48112  1 hits!
+AS 33885  1 hits!
+AS 553  1 hits!
+AS 1103  1 hits!
+AS 3356  1 hits!
+AS 47438  1 hits!
+AS 237  1 hits!
+AS 2852  1 hits!
+AS 35612  3 hits!
+AS 7018  5 hits!
+AS X  7 hits!
+AS 3265  15 hits!
+12402 did not reach us for reason: stars
+	AS_PATH:X,X,X
+	FILTERING_AS: X
+13159 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+14555 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+21516 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+27956 did not reach us for reason: stars
+51044 did not reach us for reason: stars
+51339 did not reach us for reason: stars
+AS X  4 hits!
+10012 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+10180 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+10369 did not reach us for reason: host_unreach
+	AS_PATH:20355
+	FILTERING_AS: 20355
+10782 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+10814 did not reach us for reason: network_unreach
+	AS_PATH:237,237,237,237,237
+	FILTERING_AS: 237
+10886 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+10923 did not reach us for reason: stars
+	AS_PATH:201281,201281,6939,6939,6939
+	FILTERING_AS: 6939
+10977 did not reach us for reason: host_unreach
+	AS_PATH:10075
+	FILTERING_AS: 10075
+11207 did not reach us for reason: network_unreach
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+11220 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+11422 did not reach us for reason: stars
+	AS_PATH:12990,12990
+	FILTERING_AS: 12990
+11563 did not reach us for reason: stars
+11698 did not reach us for reason: host_unreach
+	AS_PATH:1102
+	FILTERING_AS: 1102
+12074 did not reach us for reason: stars
+	AS_PATH:41090,41090
+	FILTERING_AS: 41090
+12175 did not reach us for reason: stars
+	AS_PATH:1103
+	FILTERING_AS: 1103
+12451 did not reach us for reason: stars
+	AS_PATH:12414,12414,12414,12414
+	FILTERING_AS: 12414
+12671 did not reach us for reason: stars
+	AS_PATH:7922
+	FILTERING_AS: 7922
+12871 did not reach us for reason: network_unreach
+	AS_PATH:3301
+	FILTERING_AS: 3301
+12988 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+13358 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+13476 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+13649 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+13679 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+14051 did not reach us for reason: host_unreach
+	AS_PATH:5607,5607
+	FILTERING_AS: 5607
+14075 did not reach us for reason: host_unreach
+	AS_PATH:4773
+	FILTERING_AS: 4773
+14661 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+15016 did not reach us for reason: network_unreach
+	AS_PATH:786
+	FILTERING_AS: 786
+15099 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+15145 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+15257 did not reach us for reason: stars
+15753 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+15795 did not reach us for reason: stars
+15921 did not reach us for reason: stars
+	AS_PATH:3320
+	FILTERING_AS: 3320
+16273 did not reach us for reason: stars
+	AS_PATH:9595
+	FILTERING_AS: 9595
+16732 did not reach us for reason: stars
+	AS_PATH:2852,2852,2852
+	FILTERING_AS: 2852
+16812 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+17495 did not reach us for reason: stars
+	AS_PATH:48200
+	FILTERING_AS: 48200
+17715 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+17797 did not reach us for reason: network_unreach
+	AS_PATH:X,X,X,X,X,X
+	FILTERING_AS: X
+17998 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+18284 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+18566 did not reach us for reason: network_unreach
+	AS_PATH:8251,8251
+	FILTERING_AS: 8251
+18585 did not reach us for reason: stars
+19196 did not reach us for reason: stars
+	AS_PATH:1403,1403
+	FILTERING_AS: 1403
+19354 did not reach us for reason: host_unreach
+	AS_PATH:62275
+	FILTERING_AS: 62275
+20277 did not reach us for reason: network_unreach
+	AS_PATH:57407,57407
+	FILTERING_AS: 57407
+20326 did not reach us for reason: stars
+2071 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+21326 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+21382 did not reach us for reason: host_unreach
+	AS_PATH:5607
+	FILTERING_AS: 5607
+21907 did not reach us for reason: host_unreach
+	AS_PATH:55850
+	FILTERING_AS: 55850
+22344 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+22759 did not reach us for reason: host_unreach
+	AS_PATH:5607
+	FILTERING_AS: 5607
+22899 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+22958 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+23328 did not reach us for reason: stars
+23892 did not reach us for reason: stars
+	AS_PATH:1103,1103
+	FILTERING_AS: 1103
+23907 did not reach us for reason: network_unreach
+	AS_PATH:208059
+	FILTERING_AS: 208059
+24004 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+24108 did not reach us for reason: network_unreach
+	AS_PATH:50858
+	FILTERING_AS: 50858
+24744 did not reach us for reason: host_unreach
+	AS_PATH:395592
+	FILTERING_AS: 395592
+24748 did not reach us for reason: host_unreach
+	AS_PATH:33843,33843
+	FILTERING_AS: 33843
+24982 did not reach us for reason: host_unreach
+	AS_PATH:33984
+	FILTERING_AS: 33984
+25724 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+26015 did not reach us for reason: network_unreach
+	AS_PATH:1136
+	FILTERING_AS: 1136
+26805 did not reach us for reason: stars
+	AS_PATH:9595
+	FILTERING_AS: 9595
+27460 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+2800 did not reach us for reason: host_unreach
+28270 did not reach us for reason: host_unreach
+	AS_PATH:8767
+	FILTERING_AS: 8767
+28342 did not reach us for reason: network_unreach
+	AS_PATH:1759
+	FILTERING_AS: 1759
+28511 did not reach us for reason: stars
+28648 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+28660 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+28696 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+28740 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+28745 did not reach us for reason: stars
+	AS_PATH:40980,40980,47147
+	FILTERING_AS: 47147
+28747 did not reach us for reason: stars
+	AS_PATH:1103,1103
+	FILTERING_AS: 1103
+28800 did not reach us for reason: stars
+	AS_PATH:39326
+	FILTERING_AS: 39326
+28869 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+29333 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+30025 did not reach us for reason: stars
+	AS_PATH:24904,24904
+	FILTERING_AS: 24904
+30276 did not reach us for reason: stars
+	AS_PATH:1103
+	FILTERING_AS: 1103
+30525 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+30735 did not reach us for reason: stars
+	AS_PATH:1653,1653,1653,1653
+	FILTERING_AS: 1653
+30848 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+31066 did not reach us for reason: network_unreach
+	AS_PATH:28929
+	FILTERING_AS: 28929
+31475 did not reach us for reason: stars
+	AS_PATH:1140,1140,1140,X,3320,3320,8881,8881,8881
+	FILTERING_AS: 8881
+31493 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+31733 did not reach us for reason: network_unreach
+	AS_PATH:206479,206479,206479
+	FILTERING_AS: 206479
+31910 did not reach us for reason: stars
+	AS_PATH:2119
+	FILTERING_AS: 2119
+32065 did not reach us for reason: stars
+	AS_PATH:17676
+	FILTERING_AS: 17676
+32139 did not reach us for reason: stars
+32409 did not reach us for reason: stars
+	AS_PATH:X,X,X
+	FILTERING_AS: X
+32421 did not reach us for reason: network_unreach
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+32430 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+32663 did not reach us for reason: host_unreach
+	AS_PATH:15817
+	FILTERING_AS: 15817
+3274 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+3286 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+33087 did not reach us for reason: host_unreach
+	AS_PATH:39650
+	FILTERING_AS: 39650
+33090 did not reach us for reason: stars
+33289 did not reach us for re14555 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+16772 did not reach us for reason: host_unreach
+	AS_PATH:61006
+	FILTERING_AS: 61006
+20792 did not reach us for reason: host_unreach
+	AS_PATH:20677
+	FILTERING_AS: 20677
+33404 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+34879 did not reach us for reason: stars
+	AS_PATH:X,27828,X,X
+	FILTERING_AS: X
+50202 did not reach us for reason: stars
+51339 did not reach us for reason: stars
+51447 did not reach us for reason: stars
+	AS_PATH:X,X
+	FILTERING_AS: X
+AS 20677  1 hits!
+AS 61006  1 hits!
+AS X  4 hits!
+10963 did not reach us for reason: stars
+	AS_PATH:X,6503,6503,6503,6503,6503
+	FILTERING_AS: 6503
+11880 did not reach us for reason: stars
+	AS_PATH:44084,X,X,3257,3257,3356,3356,3356
+	FILTERING_AS: 3356
+12166 did not reach us for reason: network_unreach
+	AS_PATH:X,7018,7018,7018
+	FILTERING_AS: 7018
+12918 did not reach us for reason: stars
+	AS_PATH:6867,6867
+	FILTERING_AS: 6867
+13100 did not reach us for reason: host_unreach
+	AS_PATH:36914
+	FILTERING_AS: 36914
+13319 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+13358 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+14746 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+16284 did not reach us for reason: stars
+	AS_PATH:39647,39647
+	FILTERING_AS: 39647
+18720 did not reach us for reason: stars
+	AS_PATH:61349
+	FILTERING_AS: 61349
+18805 did not reach us for reason: stars
+	AS_PATH:X,X,X,X,47438,47438
+	FILTERING_AS: 47438
+19459 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+20324 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+20792 did not reach us for reason: host_unreach
+	AS_PATH:20677
+	FILTERING_AS: 20677
+22894 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+23158 did not reach us for reason: stars
+23648 did not reach us for reason: stars
+	AS_PATH:8522,8522
+	FILTERING_AS: 8522
+26849 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+26942 did not reach us for reason: stars
+	AS_PATH:X,35612
+	FILTERING_AS: 35612
+2719 did not reach us for reason: stars
+	AS_PATH:X,7018,7018
+	FILTERING_AS: 7018
+28002 did not reach us for reason: stars
+	AS_PATH:197580
+	FILTERING_AS: 197580
+28119 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+28534 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+30621 did not reach us for reason: stars
+30720 did not reach us for reason: stars
+	AS_PATH:197595,197595
+	FILTERING_AS: 197595
+30731 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+31493 did not reach us for reason: stars
+	AS_PATH:X,3265
+	FILTERING_AS: 3265
+31757 did not reach us for reason: stars
+	AS_PATH:X,X,X,X,X,X,X,X,X,X,201011,201011
+	FILTERING_AS: 201011
+3188 did not reach us for reason: stars
+	AS_PATH:35612
+	FILTERING_AS: 35612
+32331 did not reach us for reason: network_unreach
+	AS_PATH:1103,1103,1103,1103,1103,1103
+	FILTERING_AS: 1103
+32797 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+35673 did not reach us for reason: stars
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+50287 did not reach us for reason: stars
+	AS_PATH:2852,2852,2852,2852
+	FILTERING_AS: 2852
+50564 did not reach us for reason: stars
+	AS_PATH:X,2119
+	FILTERING_AS: 2119
+51258 did not reach us for reason: stars
+	AS_PATH:X,6798,6798,6798
+	FILTERING_AS: 6798
+51293 did not reach us for reason: stars
+	AS_PATH:X,7018
+	FILTERING_AS: 7018
+52182 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+6417 did not reach us for reason: stars
+	AS_PATH:48112
+	FILTERING_AS: 48112
+AS 6798  1 hits!
+AS 39647  1 hits!
+AS 6503  1 hits!
+AS 197580  1 hits!
+AS 6867  1 hits!
+AS 3356  1 hits!
+AS 1103  1 hits!
+AS 48112  1 hits!
+AS 201011  1 hits!
+AS 8522  1 hits!
+AS 197595  1 hits!
+AS 2119  1 hits!
+AS 61349  1 hits!
+AS 47438  1 hits!
+AS 5408  1 hits!
+AS 36914  1 hits!
+AS 2852  1 hits!
+AS 20677  1 hits!
+AS 35612  2 hits!
+AS 3265  5 hits!
+AS 7018  5 hits!
+AS X  6 hits!
+ason: stars
+	AS_PATH:36874
+	FILTERING_AS: 36874
+33410 did not reach us for reason: network_unreach
+	AS_PATH:1835,1835
+	FILTERING_AS: 1835
+33615 did not reach us for reason: stars
+	AS_PATH:44194,44194
+	FILTERING_AS: 44194
+33740 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+33972 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+34622 did not reach us for reason: stars
+	AS_PATH:6939
+	FILTERING_AS: 6939
+35553 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+4783 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+4930 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+50016 did not reach us for reason: stars
+	AS_PATH:2852,2852,2852,2852
+	FILTERING_AS: 2852
+50144 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+50760 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+50847 did not reach us for reason: host_unreach
+	AS_PATH:209702
+	FILTERING_AS: 209702
+51201 did not reach us for reason: stars
+	AS_PATH:3292
+	FILTERING_AS: 3292
+51293 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+51310 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+51462 did not reach us for reason: network_unreach
+52064 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+6276 did not reach us for reason: stars
+6342 did not reach us for reason: stars
+	AS_PATH:203993,12414,12414,12414,12414
+	FILTERING_AS: 12414
+6368 did not reach us for reason: network_unreach
+	AS_PATH:39138
+	FILTERING_AS: 39138
+6386 did not reach us for reason: network_unreach
+6522 did not reach us for reason: network_unreach
+	AS_PATH:1403
+	FILTERING_AS: 1403
+6567 did not reach us for reason: stars
+	AS_PATH:1140,1140,1140,X,3320,3320,60169,8881,8881,8881,553
+	FILTERING_AS: 553
+6628 did not reach us for reason: stars
+6632 did not reach us for reason: network_unreach
+	AS_PATH:1103,1103
+	FILTERING_AS: 1103
+AS 24904  1 hits!
+AS 208059  1 hits!
+AS 10075  1 hits!
+AS 62275  1 hits!
+AS 41090  1 hits!
+AS 209702  1 hits!
+AS 8881  1 hits!
+AS 39650  1 hits!
+AS 47147  1 hits!
+AS 20355  1 hits!
+AS 39326  1 hits!
+AS 1835  1 hits!
+AS 1759  1 hits!
+AS 237  1 hits!
+AS 15817  1 hits!
+AS 395592  1 hits!
+AS 1136  1 hits!
+AS 28929  1 hits!
+AS 12990  1 hits!
+AS 55850  1 hits!
+AS 553  1 hits!
+AS 17676  1 hits!
+AS 8251  1 hits!
+AS 36874  1 hits!
+AS 5408  1 hits!
+AS 48200  1 hits!
+AS 50858  1 hits!
+AS 786  1 hits!
+AS 1653  1 hits!
+AS 4773  1 hits!
+AS 1102  1 hits!
+AS 57407  1 hits!
+AS 44194  1 hits!
+AS 3301  1 hits!
+AS 3292  1 hits!
+AS 33984  1 hits!
+AS 7922  1 hits!
+AS 2119  1 hits!
+AS 39138  1 hits!
+AS 33843  1 hits!
+AS 8767  1 hits!
+AS 206479  1 hits!
+AS 3320  1 hits!
+AS 7018  2 hits!
+AS 20712  2 hits!
+AS 9595  2 hits!
+AS 2852  2 hits!
+AS 12414  2 hits!
+AS 1403  2 hits!
+AS 5607  3 hits!
+AS 1103  5 hits!
+AS 6939  8 hits!
+AS X  14 hits!
+AS 3265  27 hits!
+10080 did not reach us for reason: stars
+	AS_PATH:9595
+	FILTERING_AS: 9595
+10584 did not reach us for reason: stars
+10858 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+10886 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+10988 did not reach us for reason: stars
+	AS_PATH:6939
+	FILTERING_AS: 6939
+11407 did not reach us for reason: network_unreach
+	AS_PATH:1103
+	FILTERING_AS: 1103
+11426 did not reach us for reason: network_unreach
+	AS_PATH:X,X,X
+	FILTERING_AS: X
+12175 did not reach us for reason: stars
+	AS_PATH:1103
+	FILTERING_AS: 1103
+12600 did not reach us for reason: stars
+	AS_PATH:1878,1878,X,1880,1653,1653
+	FILTERING_AS: 1653
+13666 did not reach us for reason: network_unreach
+	AS_PATH:7922
+	FILTERING_AS: 7922
+14025 did not reach us for reason: host_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+14051 did not reach us for reason: host_unreach
+	AS_PATH:5607
+	FILTERING_AS: 5607
+14114 did not reach us for reason: host_unreach
+	AS_PATH:46562,46562
+	FILTERING_AS: 46562
+14895 did not reach us for reason: stars
+15016 did not reach us for reason: network_unreach
+	AS_PATH:786
+	FILTERING_AS: 786
+16612 did not reach us for reason: stars
+	AS_PATH:136548,136548,136548
+	FILTERING_AS: 136548
+16891 did not reach us for reason: stars
+	AS_PATH:1103,1103
+	FILTERING_AS: 1103
+17008 did not reach us for reason: stars
+	AS_PATH:28573
+	FILTERING_AS: 28573
+17895 did not reach us for reason: stars
+18160 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+18166 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+18566 did not reach us for reason: network_unreach
+	AS_PATH:8251,8251
+	FILTERING_AS: 8251
+18651 did not reach us for reason: stars
+	AS_PATH:31479,31479
+	FILTERING_AS: 31479
+19093 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+21416 did not reach us for reason: host_unreach
+	AS_PATH:34372,34372,34372,34372,34372
+	FILTERING_AS: 34372
+21470 did not reach us for reason: stars
+22017 did not reach us for reason: network_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+22384 did not reach us for reason: stars
+22392 did not reach us for reason: stars
+	AS_PATH:1103,1103
+	FILTERING_AS: 1103
+23357 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+24744 did not reach us for reason: host_unreach
+	AS_PATH:395592
+	FILTERING_AS: 395592
+24748 did not reach us for reason: host_unreach
+	AS_PATH:33843,33843
+	FILTERING_AS: 33843
+25064 did not reach us for reason: host_unreach
+	AS_PATH:133318
+	FILTERING_AS: 133318
+25718 did not reach us for reason: host_unreach
+	AS_PATH:6799
+	FILTERING_AS: 6799
+25752 did not reach us for reason: stars
+26102 did not reach us for reason: host_unreach
+	AS_PATH:8468
+	FILTERING_AS: 8468
+26658 did not reach us for reason: network_unreach
+	AS_PATH:1103
+	FILTERING_AS: 1103
+27884 did not reach us for reason: stars
+28028 did not reach us for reason: network_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+28339 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+28342 did not reach us for reason: network_unreach
+	AS_PATH:1759
+	FILTERING_AS: 1759
+28376 did not reach us for reason: stars
+	AS_PATH:9595
+	FILTERING_AS: 9595
+28551 did not reach us for reason: network_unreach
+	AS_PATH:4764
+	FILTERING_AS: 4764
+28631 did not reach us for reason: stars
+28660 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+28739 did not reach us for reason: stars
+30025 did not reach us for reason: stars
+	AS_PATH:24904,24904
+	FILTERING_AS: 24904
+30145 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+30255 did not reach us for reason: stars
+	AS_PATH:56040,56040,56040,56040,9808,9808,9808,9808,9808
+	FILTERING_AS: 9808
+30680 did not reach us for reason: stars
+31355 did not reach us for reason: stars
+	AS_PATH:262913,262913
+	FILTERING_AS: 262913
+31519 did not reach us for reason: host_unreach
+	AS_PATH:6939,6939
+	FILTERING_AS: 6939
+31614 did not reach us for reason: stars
+32718 did not reach us for reason: host_unreach
+	AS_PATH:31334
+	FILTERING_AS: 31334
+33006 did not reach us for reason: host_unreach
+	AS_PATH:6939,6939
+	FILTERING_AS: 6939
+33327 did not reach us for reason: stars
+	AS_PATH:X,X,X
+	FILTERING_AS: X
+33981 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+34682 did not reach us for reason: host_unreach
+	AS_PATH:7922
+	FILTERING_AS: 7922
+35618 did not reach us for reason: network_unreach
+	AS_PATH:44843
+	FILTERING_AS: 44843
+35673 did not reach us for reason: network_unreach
+	AS_PATH:7018
+	FILTERING_AS: 7018
+3638 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+50142 did not reach us for reason: stars
+	AS_PATH:7922
+	FILTERING_AS: 7922
+50306 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+50762 did not reach us for reason: host_unreach
+	AS_PATH:39651
+	FILTERING_AS: 39651
+51233 did not reach us for reason: network_unreach
+	AS_PATH:7922
+	FILTERING_AS: 7922
+51462 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+6371 did not reach us for reason: stars
+	AS_PATH:48961
+	FILTERING_AS: 48961
+6386 did not reach us for reason: network_unreach
+	AS_PATH:4764
+	FILTERING_AS: 4764
+6391 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+6422 did not reach us for reason: host_unreach
+	AS_PATH:20150
+	FILTERING_AS: 20150
+6438 did not reach us for reason: host_unreach
+	AS_PATH:51859
+	FILTERING_AS: 51859
+6517 did not reach us for reason: host_unreach
+AS 31479  1 hits!
+AS 48961  1 hits!
+AS 6799  1 hits!
+AS 20712  1 hits!
+AS 1653  1 hits!
+AS 7018  1 hits!
+AS 51859  1 hits!
+AS 133318  1 hits!
+AS 9808  1 hits!
+AS 395592  1 hits!
+AS 44843  1 hits!
+AS 33843  1 hits!
+AS 31334  1 hits!
+AS 136548  1 hits!
+AS 24904  1 hits!
+AS 3265  1 hits!
+AS 8468  1 hits!
+AS 1759  1 hits!
+AS 786  1 hits!
+AS 39651  1 hits!
+AS 28573  1 hits!
+AS 34372  1 hits!
+AS 5607  1 hits!
+AS 262913  1 hits!
+AS 46562  1 hits!
+AS 20150  1 hits!
+AS 8251  1 hits!
+AS 9595  2 hits!
+AS 4764  2 hits!
+AS 7922  4 hits!
+AS 1103  5 hits!
+AS 6939  7 hits!
+AS X  13 hits!
+10180 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+10369 did not reach us for reason: host_unreach
+	AS_PATH:20355
+	FILTERING_AS: 20355
+10584 did not reach us for reason: stars
+10807 did not reach us for reason: stars
+	AS_PATH:45494
+	FILTERING_AS: 45494
+10814 did not reach us for reason: network_unreach
+	AS_PATH:237,237,237,237,237
+	FILTERING_AS: 237
+10977 did not reach us for reason: host_unreach
+	AS_PATH:10075
+	FILTERING_AS: 10075
+11037 did not reach us for reason: network_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+11162 did not reach us for reason: stars
+11226 did not reach us for reason: host_unreach
+	AS_PATH:6720
+	FILTERING_AS: 6720
+11563 did not reach us for reason: stars
+11877 did not reach us for reason: host_unreach
+	AS_PATH:57329,57329
+	FILTERING_AS: 57329
+11900 did not reach us for reason: network_unreach
+12082 did not reach us for reason: stars
+	AS_PATH:41090
+	FILTERING_AS: 41090
+12166 did not reach us for reason: network_unreach
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+12723 did not reach us for reason: stars
+	AS_PATH:5408
+	FILTERING_AS: 5408
+13319 did not reach us for reason: host_unreach
+	AS_PATH:12322,12322,12322
+	FILTERING_AS: 12322
+14051 did not reach us for reason: host_unreach
+	AS_PATH:5607,5607
+	FILTERING_AS: 5607
+14274 did not reach us for reason: host_unreach
+	AS_PATH:5607,5607
+	FILTERING_AS: 5607
+14468 did not reach us for reason: stars
+14616 did not reach us for reason: host_unreach
+	AS_PATH:3265
+	FILTERING_AS: 3265
+14744 did not reach us for reason: network_unreach
+	AS_PATH:12874,12874,12874,12874
+	FILTERING_AS: 12874
+15011 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+15099 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+15145 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+15753 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+15984 did not reach us for reason: host_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+16233 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+17596 did not reach us for reason: network_unreach
+	AS_PATH:237,237,237,237
+	FILTERING_AS: 237
+17715 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+17889 did not reach us for reason: stars
+18160 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+18566 did not reach us for reason: network_unreach
+	AS_PATH:8251,8251
+	FILTERING_AS: 8251
+18585 did not reach us for reason: stars
+18819 did not reach us for reason: stars
+	AS_PATH:28878,28878,28878,28878
+	FILTERING_AS: 28878
+18820 did not reach us for reason: host_unreach
+	AS_PATH:44066
+	FILTERING_AS: 44066
+19093 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+20324 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+20560 did not reach us for reason: network_unreach
+	AS_PATH:6939
+	FILTERING_AS: 6939
+20767 did not reach us for reason: stars
+	AS_PATH:2119,2119,2119,2119
+	FILTERING_AS: 2119
+21326 did not reach us for reason: network_unreach
+	AS_PATH:20712
+	FILTERING_AS: 20712
+21552 did not reach us for reason: network_unreach
+	AS_PATH:224,224,224,2603
+	FILTERING_AS: 2603
+22392 did not reach us for reason: stars
+	AS_PATH:1103,1103
+	FILTERING_AS: 1103
+22542 did not reach us for reason: host_unreach
+	AS_PATH:28859
+	FILTERING_AS: 28859
+2266 did not reach us for reason: host_unreach
+	AS_PATH:20766
+	FILTERING_AS: 20766
+22870 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+23825 did not reach us for reason: network_unreach
+	AS_PATH:200490,200490,200490
+	FILTERING_AS: 200490
+23892 did not reach us for reason: stars
+	AS_PATH:1103,1103
+	FILTERING_AS: 1103
+23907 did not reach us for reason: network_unreach
+	AS_PATH:208059
+	FILTERING_AS: 208059
+24004 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+24037 did not reach us for reason: host_unreach
+	AS_PATH:553
+	FILTERING_AS: 553
+24748 did not reach us for reason: host_unreach
+	AS_PATH:33843,33843
+	FILTERING_AS: 33843
+25718 did not reach us for reason: host_unreach
+	AS_PATH:6799
+	FILTERING_AS: 6799
+25724 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+25752 did not reach us for reason: stars
+26102 did not reach us for reason: host_unreach
+	AS_PATH:8468
+	FILTERING_AS: 8468
+27884 did not reach us for reason: stars
+28270 did not reach us for reason: host_unreach
+	AS_PATH:8767
+	FILTERING_AS: 8767
+28498 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+28511 did not reach us for reason: stars
+28534 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+28696 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+28739 did not reach us for reason: stars
+28740 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+2917 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+29201 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+29333 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+29870 did not reach us for reason: network_unreach
+	AS_PATH:1133,1133,1103,1103,1103
+	FILTERING_AS: 1103
+30232 did not reach us for reason: stars
+	AS_PATH:6939
+	FILTERING_AS: 6939
+30525 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+30832 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+30848 did not reach us for reason: host_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+31475 did not reach us for reason: stars
+	AS_PATH:1140,1140,X,3320,3320,60169,8881,8881,8881,553
+	FILTERING_AS: 553
+31614 did not reach us for reason: stars
+31710 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+32031 did not reach us for reason: network_unreach
+	AS_PATH:202119
+	FILTERING_AS: 202119
+32378 did not reach us for reason: stars
+32421 did not reach us for reason: network_unreach
+	AS_PATH:X,X,7018
+	FILTERING_AS: 7018
+32718 did not reach us for reason: host_unreach
+	AS_PATH:31334
+	FILTERING_AS: 31334
+3331 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265,3265
+	FILTERING_AS: 3265
+33740 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+33957 did not reach us for reason: stars
+34707 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+4719 did not reach us for reason: stars
+4783 did not reach us for reason: network_unreach
+	AS_PATH:3265,3265
+	FILTERING_AS: 3265
+50307 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X,7018
+	FILTERING_AS: 7018
+50456 did not reach us for reason: network_unreach
+	AS_PATH:7018,X,X
+	FILTERING_AS: X
+50535 did not reach us for reason: stars
+	AS_PATH:2852,2852,2852,2852
+	FILTERING_AS: 2852
+50762 did not reach us for reason: host_unreach
+	AS_PATH:39651
+	FILTERING_AS: 39651
+50847 did not reach us for reason: host_unreach
+	AS_PATH:209702
+	FILTERING_AS: 209702
+51262 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+51270 did not reach us for reason: stars
+	AS_PATH:2119,2119
+	FILTERING_AS: 2119
+51293 did not reach us for reason: network_unreach
+	AS_PATH:X,X
+	FILTERING_AS: X
+51325 did not reach us for reason: stars
+	AS_PATH:1741
+	FILTERING_AS: 1741
+51462 did not reach us for reason: network_unreach
+	AS_PATH:X
+	FILTERING_AS: X
+51818 did not reach us for reason: stars
+	AS_PATH:7018,X,X,X
+	FILTERING_AS: X
+6102 did not reach us for reason: host_unreach
+	AS_PATH:49515
+	FILTERING_AS: 49515
+6120 did not reach us for reason: stars
+	AS_PATH:42473,42473,42473
+	FILTERING_AS: 42473
+6175 did not reach us for reason: network_unreach
+	AS_PATH:1103,1103,1103
+	FILTERING_AS: 1103
+6217 did not reach us for reason: stars
+	AS_PATH:12812,12812,9051,9051,9051,X,X,1299,1299
+	FILTERING_AS: 1299
+6348 did not reach us for reason: stars
+	AS_PATH:3333,6939,6939
+	FILTERING_AS: 6939
+6357 did not reach us for reason: network_unreach
+	AS_PATH:39138,39138
+	FILTERING_AS: 39138
+6407 did not reach us for reason: stars
+6417 did not reach us for reason: stars
+	AS_PATH:48112
+	FILTERING_AS: 48112
+6422 did not reach us for reason: host_unreach
+	AS_PATH:20150
+	FILTERING_AS: 20150
+6440 did not reach us for reason: stars
+	AS_PATH:205614
+	FILTERING_AS: 205614
+6533 did not reach us for reason: network_unreach
+	AS_PATH:2613
+	FILTERING_AS: 2613
+6591 did not reach us for reason: stars
+	AS_PATH:X
+	FILTERING_AS: X
+AS 48112  1 hits!
+AS 31334  1 hits!
+AS 33843  1 hits!
+AS 28878  1 hits!
+AS 12322  1 hits!
+AS 41090  1 hits!
+AS 42473  1 hits!
+AS 200490  1 hits!
+AS 6799  1 hits!
+AS 20766  1 hits!
+AS 209702  1 hits!
+AS 208059  1 hits!
+AS 57329  1 hits!
+AS 6720  1 hits!
+AS 20355  1 hits!
+AS 8468  1 hits!
+AS 39651  1 hits!
+AS 12874  1 hits!
+AS 20150  1 hits!
+AS 8251  1 hits!
+AS 205614  1 hits!
+AS 1299  1 hits!
+AS 2613  1 hits!
+AS 44066  1 hits!
+AS 2852  1 hits!
+AS 8767  1 hits!
+AS 49515  1 hits!
+AS 202119  1 hits!
+AS 20712  1 hits!
+AS 28859  1 hits!
+AS 45494  1 hits!
+AS 1741  1 hits!
+AS 39138  1 hits!
+AS 5408  1 hits!
+AS 2603  1 hits!
+AS 10075  1 hits!
+AS 553  2 hits!
+AS 5607  2 hits!
+AS 2119  2 hits!
+AS 237  2 hits!
+AS 7018  3 hits!
+AS 1103  4 hits!
+AS 6939  7 hits!
+AS 3265  15 hits!
+AS X  18 hits!
