@@ -33,6 +33,8 @@ open( my $STATS_PER_IRR, '>', $stats_per_irr);
 my $blame_log = "/tmp/$year-$month-$day-blamelog";
 open (my $BLAME_LOG, '>', $blame_log);
 
+my $not_found_log = "/mount/storage/stash/historic/stats/repo_compare/not_found/";
+open (my $NF_LOG, '>', "$not_found_log/$year-$month-$day");
 my $blame_sources = { };
 
 my $pt_irr_v4 = retrieve $file or die( "could not open file $file" );
@@ -41,10 +43,10 @@ my $pt_irr_v4 = retrieve $file or die( "could not open file $file" );
 $file =~ s/irrv4/irrv6/;
 my $pt_irr_v6 = retrieve $file or die( "could not open file $file" );
 
-$file =~ s/irr/rpki/;
-my $pt_rpki_v6 = retrieve $file or die( "could not open file $file" );
-$file =~ s/v6/v4/;
+$file = "$rpki_historic_dir/$year-$month-$day-rpkiv4.storable";
 my $pt_rpki_v4 = retrieve $file or die( "could not open file $file" );
+$file =~ s/v4/v6/g;
+my $pt_rpki_v6 = retrieve $file or die( "could not open file $file" );
 
 
 ####################################################################
@@ -112,6 +114,7 @@ sub compare_tries {
   
   my $lookup_result = $pt_irr->match_exact_string($prefix);
   if ( ! defined $lookup_result ) {
+    say $NF_LOG "$prefix";
     $unique_prefix_coverage->{not_found}++;
     return;
   }
