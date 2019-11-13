@@ -66,7 +66,7 @@ if ($date =~ /2019_(\d{2})_(\d{2})-00/) {
 
 # Input sanitation.
 
-exit(0) if (-e "$output_dir//$year-$month-$day-irrv4.storable" );
+#exit(0) if (-e "$output_dir//$year-$month-$day-irrv4.storable" );
 
 my @irr_files = `find $irr_dir`;
 chomp @irr_files;

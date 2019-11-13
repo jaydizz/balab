@@ -57,6 +57,7 @@ my $unique_prefix_coverage = {
   count_conflicts       => 0, #Count of conflicting ASes.
                                 #If a prefix has multiple conflicts, they are counted as they occur. 
   covered_exact         => 0,  #both contain the exakt same information
+  covered_ls         => 0,  #both contain the exakt same information
   not_found             => 0,  #RPKI Prefix is not found in IRR
   old_info_irr          => 0,   #To be implemented: If IRRs hold more information, 
   unique_conflicts      => 0,  #Contains the unique conflict count. 
@@ -111,12 +112,17 @@ sub compare_tries {
   
   my $pt_irr =  $AF ? $pt_irr_v6 : $pt_irr_v4;
   $unique_prefix_coverage->{count}++; 
+  my $flag_exact_match = 1;
   
   my $lookup_result = $pt_irr->match_exact_string($prefix);
   if ( ! defined $lookup_result ) {
-    say $NF_LOG "$prefix";
-    $unique_prefix_coverage->{not_found}++;
-    return;
+    $lookup_result = $pt_irr->match_string($prefix);
+    if (! defined $lookup_result ) { 
+      say $NF_LOG "$prefix";
+      $unique_prefix_coverage->{not_found}++;
+      return;
+    }
+    $flag_exact_match = 0; 
   }
   
   # Let's find out if all elements are equal. 
@@ -139,7 +145,11 @@ sub compare_tries {
 
   # No differences -> exakt coverage! 
   if ( scalar @irr_conflicts == 0) {
-    $unique_prefix_coverage->{covered_exact}++;
+    if ( $flag_exact_match ) {
+      $unique_prefix_coverage->{covered_exact}++;
+      return;
+    }
+    $unique_prefix_coverage->{covered_ls}++;
     return;
   }
 }

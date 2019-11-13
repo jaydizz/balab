@@ -298,12 +298,14 @@ sub _parse_route_objects {
       $routeobject_found = 6;
     }
 
-    if ( $routeobject_found && $_ =~ /origin:\s+(AS\d+)/ ) {
+    if ( $routeobject_found && $_ =~ /origin:\s+[ASas]{2}(\d+)/ ) {
+      
+      my $origin_as = "AS$1";
 
       my $stash = $routeobject_found == 6 ? $stash_v6 : $stash_v4;
 
       $stash->{$prefix}->{length} = $mask;
-      $stash->{$prefix}->{origin}->{$1}->{source} = $file;
+      $stash->{$prefix}->{origin}->{$origin_as}->{source} = $file;
       $stash->{$prefix}->{prefix} = $prefix;
 
       #Additionally calculate base and end ip for easier sorting and containment checks. 
