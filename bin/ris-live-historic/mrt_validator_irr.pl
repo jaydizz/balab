@@ -66,8 +66,7 @@ while (my $dd = Net::MRT::mrt_read_next($mrt))
         #$origin_as = @{$entry->{entries}{AS_PATH}[-1]} [-1];
       }
       $count->{total}++;
-      
-        add_hashes( validate_irr( $dd->{prefix}, $origin_as, $pt_v4, $pt_v6)); 
+      add_hashes( validate_irr( "$dd->{prefix}/$dd->{bits}", $origin_as, $pt_v4, $pt_v6)); 
         
     }
   }
@@ -78,19 +77,13 @@ while (my $dd = Net::MRT::mrt_read_next($mrt))
 }
 
 print "\n" if $VERBOSE;;
-my $header = "#";
-my $line = "$year-$month-$day,";
-foreach my $key (sort keys %$count) {
-  next if $key eq "total";
-  $header = $header . "$key,";
-  $line = $line . sprintf("%.3f", $count->{$key}/$count->{total}*100) . "," ;
-}
-#say $header;
-say $line;
+my $line =  join( ',', map{ if ($_ ne "total" ) { $count->{$_}/$count->{total}*100 } else { () } } sort keys %$count ); 
+say "$year-$month-$day,$line";
 
 sub add_hashes {
   my $hash = shift;
   foreach my $key (keys %$hash) {
+    next if $key eq "pt";
     $count->{$key} = $count->{$key} + $hash->{$key};
   }
 } 

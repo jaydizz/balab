@@ -65,18 +65,19 @@ while (my $dd = Net::MRT::mrt_read_next($mrt))
         next;
         #$origin_as = @{$entry->{entries}{AS_PATH}[-1]} [-1];
       }
-      $count->{total}++;
       
       eval {
-        add_hashes( validate_rpki( $dd->{prefix}, $origin_as, $pt_v4, $pt_v6)); 
+        add_hashes( validate_rpki( "$dd->{prefix}/$dd->{bits}", $origin_as, $pt_v4, $pt_v6)); 
       };
       if ($@) {
-        warn "Invalid Key occured. $file\n";
-        warn "==========DD=================================================================\n";
-        warn Dumper $dd;
-        warn "==========Prefix=================================================================\n";
-        warn $dd->{prefix};
+        next;
+     #   warn "Invalid Key occured. $file\n";
+     #   warn "==========DD=================================================================\n";
+     #   warn Dumper $dd;
+     #   warn "==========Prefix=================================================================\n";
+     #   warn $dd->{prefix};
      }   
+     $count->{total}++;
         
     }
   }
@@ -87,19 +88,18 @@ while (my $dd = Net::MRT::mrt_read_next($mrt))
 }
 
 print "\n" if $VERBOSE;;
-my $header = "#";
-my $line = "$year-$month-$day,";
-foreach my $key (sort keys %$count) {
-  next if $key eq "total";
-  $header = $header . "$key,";
-  $line = $line . sprintf("%.3f", $count->{$key}/$count->{total}*100) . "," ;
-}
-#say $header;
-say $line;
+#my $header = "#";
+
+my $header = join( ',', sort keys %$count);
+#say "#$header";
+my $line =  join( ',', map{ if ($_ ne "total" ) { $count->{$_}/$count->{total}*100 } else { () } } sort  keys %$count ); 
+say "$year-$month-$day,$line";
+
 
 sub add_hashes {
   my $hash = shift;
   foreach my $key (keys %$hash) {
+    next if $key eq 'pt';
     $count->{$key} = $count->{$key} + $hash->{$key};
   }
 } 
