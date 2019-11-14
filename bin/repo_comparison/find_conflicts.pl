@@ -84,12 +84,14 @@ $pt_rpki_v6->climb(
 
 
 my $string = join(',', sort keys %$unique_prefix_coverage);
-#say "$string";
+say "$string";
 $string = join(',', map { $unique_prefix_coverage->{$_}/$unique_prefix_coverage->{count}*100 } sort keys %$unique_prefix_coverage);
 say "$year-$month-$day,$string";
 
 $string = join(',', sort keys %$blame_sources);
 
+my $header = join(',', sort keys %$blame_sources);
+say $STATS_PER_IRR "#$header";
 my $per_irr = join(',', 
   map { $blame_sources->{$_}/$unique_prefix_coverage->{count_conflicts}*100}
   sort keys %$blame_sources);

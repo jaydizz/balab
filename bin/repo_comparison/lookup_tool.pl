@@ -62,6 +62,15 @@ my $rpki_return = validate_rpki($prefix, $asn, $trie_rpki_v4, $trie_rpki_v6);
 
 
 say "=====irr====";
+
+
+my $result = Dumper $irr_return;
+my $origins = @{$irr_return->{pt}}[0]->{origin};
+my $asns   = join( '\n', map { "\t$_, source: $origins->{$_}->{source}" } keys %$origins);
+
+say $result;
+say "Possible origins";
+say $asns;
 foreach my $key (keys %$irr_return) {
   next if ($key eq "pt");
   if ($irr_return->{$key}) {
@@ -69,7 +78,7 @@ foreach my $key (keys %$irr_return) {
     if ($key eq "invalid") {
       print "Possible ASNs:\n";
       foreach my $origin_as (keys %{ @{$irr_return->{pt}}[0]->{origin}}) {
-    $DB::single = 1;
+        $DB::single = 1;
         print "\t$origin_as source: @{ $irr_return->{pt}}[0]->{origin}->{$origin_as}->{source} \n";
       }
       print "\n";
