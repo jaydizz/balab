@@ -27,9 +27,12 @@ my $json;
 #if ( -e $tmp_file ) {
 #  $json = retrieve($tmp_file);  
 #} else { 
-  my $curl = `curl  -G 'http://localhost:8086/query' --data-urlencode "db=test_measure" --data-urlencode "q=SELECT sum(\"value\") FROM announce_rpki WHERE time >= now()-1d AND time < now() GROUP BY time(1d), \"validity\" fill(none)"`;
+  my $curl = `curl  -G 'http://localhost:8086/query' --data-urlencode "db=test_measure" --data-urlencode "q=SELECT sum(\"value\") FROM announce_rpki WHERE time >= now()-30d AND time < now() GROUP BY time(1d), \"validity\" fill(none)"`;
+  my $curl2 = `curl  -G 'http://localhost:8086/query' --data-urlencode "db=test_measure" --data-urlencode "q=SELECT sum(\"value\") FROM announce_rpki WHERE time >= now()-60d AND time < now()-30d GROUP BY time(1d), \"validity\" fill(none)"`;
   chomp $curl;
+  chomp $curl2;
   $json = decode_json($curl);
+  my $json2 = decode_json($curl2);
  # store($json, $tmp_file);
 #}
 
@@ -37,6 +40,18 @@ my $json;
 my $result = { }; # We extract all the valuable data to this hash.
 
 foreach my $tag_group (@{ $json->{"results"}[0]->{"series"} }) {
+    
+  my $tag = $tag_group->{"tags"}->{"validity"};
+  
+  foreach my $value_group ( @{ $tag_group->{"values"} } ) {
+    #          _time of msrmt______             _____Value____
+    my $time = @{ $value_group }[0];
+    my $value = @{ $value_group }[1];
+    $result->{$time}{$tag} = $value;
+     
+  }
+}
+foreach my $tag_group (@{ $json2->{"results"}[0]->{"series"} }) {
     
   my $tag = $tag_group->{"tags"}->{"validity"};
   

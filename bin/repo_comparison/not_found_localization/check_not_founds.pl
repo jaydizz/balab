@@ -15,22 +15,24 @@ my $pt_v6 = retrieve("./pt_v6.storable");
 
 my $blame_orgs = {};
 
+my $total = 0;
 while ( <$FH> ) {
   chomp($_);
   my $pt = (index $_, ':') > 0 ? $pt_v6 : $pt_v4;
 
   my $org = $pt->match_string($_);
   next if (! $org);
-  if ( $org eq "RIPE" ) {
-    say $_;
-  }   
+  #if ( $org eq "RIPE" ) {
+  #  say $_;
+  #}i 
+  $total++;  
   $blame_orgs->{$org} = 0 unless $blame_orgs->{$org};
   $blame_orgs->{$org}++;
 }
 
 
-my $header = join( ',', sort keys %$blame_orgs);
-my $output = join( ',', map { $blame_orgs->{$_} } sort keys %$blame_orgs);
+my $header = join( ',', sort { $blame_orgs->{$b} <=> $blame_orgs->{$a} } keys %$blame_orgs);
+my $output = join( ',', map { $blame_orgs->{$_}/$total * 100 } sort { $blame_orgs->{$b} <=> $blame_orgs->{$a} } keys %$blame_orgs);
 
 say $header;
 say $output;  

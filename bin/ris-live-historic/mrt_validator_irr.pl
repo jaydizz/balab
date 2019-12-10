@@ -65,14 +65,18 @@ while (my $dd = Net::MRT::mrt_read_next($mrt))
         next;
         #$origin_as = @{$entry->{entries}{AS_PATH}[-1]} [-1];
       }
+      my $validation_result = validate_irr( "$dd->{prefix}/$dd->{bits}", $origin_as, $pt_v4, $pt_v6);
+      if ( $validation_result->{not_found} && $VERBOSE) {
+        say "$dd->{prefix}/$dd->{bits}";
+      }
       $count->{total}++;
-      add_hashes( validate_irr( "$dd->{prefix}/$dd->{bits}", $origin_as, $pt_v4, $pt_v6)); 
+      add_hashes( $validation_result); 
         
     }
   }
   if (!($count->{total} % 1000) ) 
   {
-    logger_no_newline("Processed $count->{total} routes") if $VERBOSE;
+    #logger_no_newline("Processed $count->{total} routes") if $VERBOSE;
   }
 }
 
